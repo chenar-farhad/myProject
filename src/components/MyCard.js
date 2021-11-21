@@ -40,6 +40,14 @@ export default function MyCard(props) {
           <div>
             <Button
               onClick={() => {
+                localStorage.setItem(
+                  "cart",
+                  JSON.stringify({
+                    title: props.title,
+                    description: props.description,
+                    image: props.image,
+                  })
+                );
                 dispatch(
                   addProduct({
                     title: props.title,
@@ -50,7 +58,7 @@ export default function MyCard(props) {
               }}
               icon={<ShoppingCartOutlined />}
             ></Button>
-            <Button  icon={<HeartFilled />}></Button>
+            <Button icon={<HeartFilled />}></Button>
             <Tooltip title="Share">
               <Button icon={<ShareAltOutlined />}></Button>
             </Tooltip>
