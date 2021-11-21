@@ -11,7 +11,8 @@ import "./components/myStyle.css";
 import "./App.css";
 import "../node_modules/antd/dist/antd.css";
 import { useMediaQuery } from "react-responsive";
-import Hero from "./components/Hero";
+import NotFound404 from "./pages/NotFound404";
+import ShoppingCart from "./pages/ShoppingCart";
 
 function App() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
@@ -22,17 +23,14 @@ function App() {
       {/* Navbar always shows no matter which route we're on */}
       {/* {isTabletOrMobile && <MobileNavbar />}
       {isBigScreen && <BigNavbar />} */}
-      <Hero/>
-      <BigNavbar/>
+      <BigNavbar />
       {/* Setting up our routes */}
       <Routes>
         <Route path="/" element={<Home />} />
-
-        <Route path="/categories" element={<Categories />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/products" element={<Products />} />
-        {/* if the URL is /login  , render the Login component */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/cart" element={<ShoppingCart />} />
+        <Route path="*" element={<NotFound404/>} />
       </Routes>
     </div>
   );

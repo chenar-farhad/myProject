@@ -1,0 +1,42 @@
+.iBigNav {
+  width: 100vw;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+.iBigNav ul{
+  color: var(--colorMain1);
+  font-size: larger;
+  height: 50px;
+  margin-left: 200px;
+}
+
+ .iBigNav a{
+  color: var(--colorMain1) !important;
+}
+.iBigNav a:hover{
+color: #1890ff !important;
+}
+/* start search */
+.iHomeSearch {
+  display: flex;
+  align-items: center;
+  margin-right: 200px;
+}
+
+.iHomeSearch .input {
+  border-radius: 50px;
+  text-align: center;
+  width: 300px;
+  height: 35px;
+  margin: 10px;
+  border: 0px;
+  background-color: var(--colorBg);
+}
+.iHomeSearch button {
+  background-color: var(--colorMain1) !important;
+  border: 1px solid var(--colorMain1) !important;
+  color: var(--colorBg) !important;
+}
+/* end search */

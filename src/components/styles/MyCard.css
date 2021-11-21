@@ -1,0 +1,53 @@
+.iCard {
+  width: 200px !important;
+  height: 410px !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-flow: row wrap !important;
+  margin: 10px !important;
+  /* box-shadow: 1px 3px 10px rgb(236, 236, 236); */
+  border-radius: 10px !important;
+  overflow: hidden;
+}
+.iCard img {
+  height: 200px !important;
+  margin: 0px !important;
+}
+
+.iCard Button {
+  border: 0px;
+  border-radius: 30px;
+  background-color: var(--colorMain1);
+  color: var(--colorWhite);
+  margin: 0px 5px 0px 5px !important;
+}
+.iCard button:hover {
+  border: 0px;
+  border-radius: 30px;
+  background-color: var(--colorWhite);
+  color: var(-- colorMain1) !important;
+}
+
+.iCard button:focus {
+  background-color: var(--colorMain1);
+  color: var(--colorWhite);
+}
+
+
+
+.iCardFooter {
+  height: auto !important;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.iCardFooter p {
+  /* padding: 0px; */
+  text-align: right !important;
+  margin: 0px;
+}

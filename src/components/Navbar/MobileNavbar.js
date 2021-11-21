@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Drawer, Button } from "antd";
 import { Link } from "react-router-dom";
 import { Menu } from "react-feather";
+import "../styles/nav/MobileNavbar.css"
 
 export default function MobileNavbar() {
   const [visible, setVisible] = useState(false);

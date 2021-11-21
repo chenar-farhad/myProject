@@ -1,0 +1,22 @@
+
+.iNa5v {
+    background-color: var(--colorMain1);
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  
+.iNavListMobile ul {
+    width: 100%;
+  }
+  .iNavListMobile li {
+    /* background-color: aqua; */
+    color: var(--colorMain1) !important;
+    font-size: large;
+    font-weight: bold;
+    padding: 20px 5px;
+    border-bottom: 1px solid rgb(231, 231, 231);
+  }
+  

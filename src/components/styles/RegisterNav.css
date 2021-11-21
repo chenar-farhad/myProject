@@ -1,0 +1,15 @@
+.iRegisterNav {
+  display: flex;
+}
+.iRegisterNav h1 {
+
+  margin-bottom: 0px;
+  margin-left: 20px;
+  width: 100%;
+  font-weight: bold;
+  color: var(--colorMain1);
+}
+.iRegisterNav ul {
+  display: flex;
+  justify-content: right;
+}

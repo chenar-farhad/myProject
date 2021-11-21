@@ -1,0 +1,43 @@
+.iDivider {
+  color: var(--colorMain1) !important;
+}
+.iHomeSlider img {
+  width: 100%;
+}
+
+
+.iHomeHero {
+  height: auto;
+  background-color: var(--colorWhite);
+  border-radius: 10px;
+  box-shadow: 1px 3px 10px rgb(236, 236, 236);
+  margin: 0px 0px 50px 0px;
+  padding: 20px;
+}
+
+.iHomeCategories {
+  height: auto;
+  background-color: var(--colorWhite);
+  border-radius: 10px;
+  box-shadow: 1px 3px 10px rgb(236, 236, 236);
+  margin: 50px 0px 50px 0px;
+  padding: 20px;
+}
+
+.iStores {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 40px 0px 40px 0px;
+}
+
+.iHomeStores {
+  height: auto;
+  width: 100%;
+  background-color: var(--colorWhite);
+  border-radius: 10px;
+  box-shadow: 1px 3px 10px rgb(236, 236, 236);
+  padding: 20px;
+  margin: 10px;
+}

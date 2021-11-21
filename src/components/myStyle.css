@@ -8,8 +8,12 @@
   font-style: normal;
 }
 
-.font_Speda {
+.font_kurdish {
   font-family: "Speda";
+}
+.font_english {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 * {
@@ -17,53 +21,15 @@
 
   --colorWhite: rgb(255, 255, 255);
   --colorBg: #f2f2f5;
-  --colorMain1: #3fd1a5;
+  --colorMain1: #7e3fd1;
+  /* --colorMain1: #3fd1a5; */
 }
 
 body {
   overflow-x: hidden;
 }
 
-.iContainer {
-  width: 80%;
-}
-.iTopHero{
-    /* height: 200px; */
-    display: flex;
-    justify-content: center;
-    align-items: ;
-}
-.iHomeSlider img{
-    width: 100%;
-}
-
-.iNav {
-  background-color: var(--colorMain1);
-  height: 70px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.iBigNav {
-  width: 100vw;
-  height: auto;
-  z-index: 999;
-
-}
-.iBigNav ul{
-  display: flex;
-  /* direction: rtl; */
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  color: var(--colorMain1);
-  /* font-weight: bold; */
-  font-size: larger;
-  height: 50px;
-}
-
-.iHomeBody {
+.iBody {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,58 +40,12 @@ body {
   padding-top: 50px;
 }
 
-.iHomeHero {
-  height: auto;
-  background-color: var(--colorWhite);
-  border-radius: 10px;
-  box-shadow: 1px 3px 10px rgb(236, 236, 236);
-  margin: 50px 0px 50px 0px;
-  padding: 20px;
-}
-
-.iStores {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 40px 0px 40px 0px;
-}
-
-.iHomeStores {
-  height: auto;
-  width: 100%;
-  background-color: var(--colorWhite);
-  border-radius: 10px;
-  box-shadow: 1px 3px 10px rgb(236, 236, 236);
-  padding: 20px;
-  margin: 10px;
-}
-
-.iHomeCategories {
-  height: auto;
-  background-color: var(--colorWhite);
-  border-radius: 10px;
-  box-shadow: 1px 3px 10px rgb(236, 236, 236);
-  margin: 50px 0px 50px 0px;
-  padding: 20px;
+.iContainer {
+  width: 90%;
 }
 
 footer {
   width: 100%;
   height: 200px;
   background-color: var(--colorWhite);
-}
-
-/* -------mobile----*/
-
-.iNavListMobile ul {
-  width: 100%;
-}
-.iNavListMobile li {
-  /* background-color: aqua; */
-  color: var(--colorMain1) !important;
-  font-size: large;
-  font-weight: bold;
-  padding: 20px 5px;
-  border-bottom: 1px solid rgb(231, 231, 231);
 }
