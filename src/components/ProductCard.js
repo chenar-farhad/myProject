@@ -16,6 +16,17 @@ export default function ProductCard(props) {
   return (
     <div>
       <Card
+        onClick={() => {
+          dispatch(
+            addProduct({
+              id:props.title,
+              title: props.title,
+              description: props.description,
+              image: props.image,
+            })
+          );
+
+        }}
         className="iCard"
         hoverable
         // loading

@@ -41,7 +41,7 @@ export default function CartCard(props) {
                   dispatch(
                     removeProduct(props.index));
 
-                  setQty(0);
+                  // setQty(0);
                 }}
                 key="ellipsis"
               />,
