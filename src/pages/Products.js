@@ -1,6 +1,6 @@
 import { Divider, Skeleton } from "antd";
 import React from "react";
-import MyCard from "../components/MyCard";
+import ProductCard from "../components/ProductCard";
 
 import "../components/styles/Products.css";
 
@@ -13,9 +13,9 @@ export default function Products() {
             کاڵاکان
           </Divider>
           <div className="iProductCards">
-          <MyCard title="title1" description="des1" image="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
-          <MyCard title="title2" description="des2" image="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
-          <MyCard title="title3" description="des3" image="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+          <ProductCard title="title1" description="des1" image="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+          <ProductCard title="title2" description="des2" image="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+          <ProductCard title="title3" description="des3" image="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
 
             <Skeleton active />
             <Skeleton active />

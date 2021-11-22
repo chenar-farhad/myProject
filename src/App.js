@@ -12,14 +12,15 @@ import "./App.css";
 import "../node_modules/antd/dist/antd.css";
 import { useMediaQuery } from "react-responsive";
 import NotFound404 from "./pages/NotFound404";
-import ShoppingCart from "./pages/ShoppingCart";
+import Carts from "./pages/Carts";
 
 function App() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   const isBigScreen = useMediaQuery({ query: "(min-width: 1224px)" });
 
   return (
-    <div className="App">
+    <div className="App noselect" style={{overflowX:"hidden"}}>
+
       {/* Navbar always shows no matter which route we're on */}
       {/* {isTabletOrMobile && <MobileNavbar />}
       {isBigScreen && <BigNavbar />} */}
@@ -29,7 +30,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/cart" element={<ShoppingCart />} />
+        <Route path="/carts" element={<Carts />} />
         <Route path="*" element={<NotFound404/>} />
       </Routes>
     </div>

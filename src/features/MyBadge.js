@@ -6,11 +6,22 @@ export default function MyBadge() {
   const products = useSelector((state) => state.cart.products);
   return (
     <div>
-      <>
-        <Badge count={products.length} size="small">
-          <ShoppingBag size="20" />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          paddingRight: "10px",
+        }}
+      >
+        <Badge
+          style={{ fontFamily: "arial" }}
+          count={products.length}
+          size="small"
+        >
+          <ShoppingBag color="var(--colorMain1)" size="20" />
         </Badge>
-      </>
+      </div>
     </div>
   );
 }

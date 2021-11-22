@@ -1,0 +1,23 @@
+.iCartCard .ant-card{ /* cartakani naw sabataka*/
+    width: 500px !important;
+    height: auto;
+    border-radius: 10px;
+
+}
+
+.iCartCard .ant-card ul{
+border-radius: 0px 0 10px 10px;
+}
+.iCarts{
+    width: 90% !important;
+}
+
+.iBodyCart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--colorBg);
+    height: auto;
+    width: 100vw;
+    padding-top: 50px;}

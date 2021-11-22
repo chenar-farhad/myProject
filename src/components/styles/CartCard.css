@@ -1,0 +1,23 @@
+/* img{
+    height: 200px !important;
+    border-radius: 30px;
+    padding: 20px;
+} */
+
+.iCartCard {
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  /* display: flex;
+    justify-content: center !important;
+    align-items: center;
+    flex-direction: row;
+    width: 80% !important;
+
+    background-color: var(--colorWhite);
+    border-radius: 10px !important;
+    box-shadow: 1px 3px 10px rgb(236, 236, 236);
+    margin: 50px 0px 50px 0px;
+    padding: 20px;  */
+}

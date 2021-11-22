@@ -1,7 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
+import ProductCard from "../components/ProductCard";
 
 const initialState = {
-  products: [],
+  products: [
+    {
+      title: "titleeee",
+      description: "fsfsdfffdsf",
+      image: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
+    },
+  ],
 };
 
 const cartSlice = createSlice({
@@ -19,7 +26,10 @@ const cartSlice = createSlice({
       ];
     },
 
-    removeProduct: (state, action) => {},
+    removeProduct: (state, action) => {
+      state.products.splice(1,action.payload);
+      // console.log(action.payload);
+    },
   },
 });
 

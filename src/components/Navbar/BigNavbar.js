@@ -5,8 +5,8 @@ import HomeSearch from "../../features/HomeSearch";
 import "../styles/nav/BigNavbar.css";
 import { Link } from "react-router-dom";
 import RegisterNav from "../RegisterNav";
-import MyBadge from "../../features/MyBadge";
-import Cart from "../../pages/ShoppingCart";
+// import MyBadge from "../../features/MyBadge";
+// import Cart from "../../pages/Carts";
 
 export default function BigNavbar() {
   const { SubMenu } = Menu;
@@ -32,15 +32,14 @@ export default function BigNavbar() {
             <Menu.Item key="setting:2">جلوبەرگ</Menu.Item>
             <Menu.Item key="setting:3">کاتژمێر و ئێکسکوارات</Menu.Item>
           </SubMenu>
-          <Menu.Item>
+          {/* <Menu.Item>
           <Link as={Link} to="/cart">
             <MyBadge key="dd" onClick={<Cart />} />
           </Link>
-          </Menu.Item>
+          </Menu.Item> */}
         </Menu>
         <div>
           <HomeSearch />
-
         </div>
       </div>
     </>

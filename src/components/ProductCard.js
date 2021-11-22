@@ -1,4 +1,4 @@
-import "./styles/MyCard.css";
+import "./styles/ProductCard.css";
 import React from "react";
 import { Card, Button, Tooltip } from "antd";
 import {
@@ -11,7 +11,7 @@ import { addProduct } from "../features/cartSlice";
 
 const { Meta } = Card;
 
-export default function MyCard(props) {
+export default function ProductCard(props) {
   const dispatch = useDispatch();
   return (
     <div>
@@ -40,14 +40,6 @@ export default function MyCard(props) {
           <div>
             <Button
               onClick={() => {
-                localStorage.setItem(
-                  "cart",
-                  JSON.stringify({
-                    title: props.title,
-                    description: props.description,
-                    image: props.image,
-                  })
-                );
                 dispatch(
                   addProduct({
                     title: props.title,
