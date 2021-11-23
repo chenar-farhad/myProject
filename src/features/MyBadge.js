@@ -19,7 +19,7 @@ export default function MyBadge() {
           count={products.length}
           size="small"
         >
-          <ShoppingBag color="var(--colorMain1)" size="20" />
+          <ShoppingCart color="var(--colorMain1)" size="20"/>
         </Badge>
       </div>
     </div>

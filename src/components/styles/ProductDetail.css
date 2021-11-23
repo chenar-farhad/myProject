@@ -1,0 +1,78 @@
+.iProductDetailBody {
+}
+
+.iProductDetails {
+    height: auto;
+    background-color: var(--colorWhite);
+    border-radius: 10px;
+    box-shadow: 1px 3px 10px rgb(236, 236, 236);
+    margin: 0px 0px 50px 0px;
+    padding: 20px;
+    
+    display: flex;
+    flex-direction: row;
+}
+
+.iProductDetailHeader {
+  margin-bottom: 40px;
+  direction: rtl;
+}
+.iProductDetailHeader h5 {
+  color: var(--colorMain1);
+  direction: rtl;
+}
+
+.iProductDetailDesc {
+  padding: 0 20px 0 20px;
+  font-size: large;
+  direction: rtl;
+}
+.iProductDetail {
+  width: 100%;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}
+
+.iProductImages img {
+  border-radius: 10px !important;
+  padding: 5px;
+  overflow: hidden;
+}
+
+.iProductBtn {
+  background-color: aqua;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iProductBtnCart {
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  margin: 5px;
+  background-color: var(--colorMain1);
+  color: var(--colorWhite);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.iProductBtnCart:hover {
+  color: var(--colorMain1);
+  background-color: var(--colorWhite);
+  border: 1px solid var(--colorMain1);
+}
+
+/* START comment  */
+.iProductComment {
+    height: auto;
+    background-color: var(--colorWhite);
+    border-radius: 10px;
+    box-shadow: 1px 3px 10px rgb(236, 236, 236);
+    margin: 0px 0px 50px 0px;
+    padding: 20px;
+}
+/*  END comment  */

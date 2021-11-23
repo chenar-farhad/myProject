@@ -13,7 +13,7 @@ import "../node_modules/antd/dist/antd.css";
 import { useMediaQuery } from "react-responsive";
 import NotFound404 from "./pages/NotFound404";
 import Carts from "./pages/Carts";
-import ProdductDetail from "./pages/ProdductDetail";
+import ProductDetail from "./pages/ProductDetail";
 
 function App() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
@@ -32,7 +32,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/carts" element={<Carts />} />
-        <Route path="/products/:id" element={<ProdductDetail />} />
+        <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="*" element={<NotFound404/>} />
       </Routes>
     </div>

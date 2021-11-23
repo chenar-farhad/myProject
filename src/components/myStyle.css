@@ -21,7 +21,7 @@
 
   --colorWhite: rgb(255, 255, 255);
   --colorBg: #f2f2f5;
-  --colorMain1: #7e3fd1;
+  --colorMain1: #d13f3f;
   /* --colorMain1: #3fd1a5; */
 
 }
@@ -39,6 +39,7 @@
 
 body {
   overflow-x: hidden;
+  
 }
 
 .iBody {
