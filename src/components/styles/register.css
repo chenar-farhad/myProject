@@ -1,0 +1,75 @@
+.iContainerLogin {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iBodyLogin {
+  height: 75vh;
+  background-color: var(--colorBg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iContent {
+  background-color: var(--colorWhite) !important;
+  padding: 100px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  width: 1000px;
+  box-shadow: 1px 3px 10px rgb(236, 236, 236);
+}
+
+.iContent .iconName {
+  color: var(--colorMain1);
+}
+
+.iContent .formItem {
+  text-align: right !important;
+  padding-bottom: 10px;
+}
+
+.iContent Input {
+  direction: rtl !important;
+  height: 30px;
+  border: 0px !important;
+}
+
+.iContent Button {
+  background-color: var(--colorMain1);
+  border: 1 solid var(--colorMain1);
+  color: var(--colorWhite);
+  width: 150px;
+  height: 50px;
+  border-radius: 40px;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 3px 10px rgb(236, 236, 236);
+}
+.iContent Button:hover {
+  background-color: var(--colorBg);
+  color: var(--colorMain1);
+  border: 1px solid var(--colorMain1);
+  box-shadow: 1px 3px 10px rgb(236, 236, 236);
+}
+
+.iContent button:focus {
+  background-color: var(--colorMain1);
+  color: var(--colorWhite);
+}
+
+.iContent a,
+.iContent a:hover {
+  color: var(--colorMain1);
+}
+
+.iBodyLogin .iFormButton {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

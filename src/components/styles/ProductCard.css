@@ -9,24 +9,30 @@
   /* box-shadow: 1px 3px 10px rgb(236, 236, 236); */
   border-radius: 10px !important;
   overflow: hidden;
+  text-align: right;
+  direction: rtl;
+
 }
 .iCard img {
   height: 200px !important;
+  width: 100% !important;
   margin: 0px !important;
 }
 
 .iCard Button {
   border: 0px;
   border-radius: 30px;
-  background-color: var(--colorMain1);
-  color: var(--colorWhite);
   margin: 0px 5px 0px 5px !important;
 }
 .iCard button:hover {
   border: 0px;
   border-radius: 30px;
+
+  background-color: var(--colorMain1);
+  color: var(--colorWhite);
+  /*   
   background-color: var(--colorWhite);
-  color: var(-- colorMain1) !important;
+  color: var(-- colorMain1) !important; */
 }
 
 .iCard button:focus {
@@ -34,11 +40,9 @@
   color: var(--colorWhite);
 }
 
-
-
 .iCardFooter {
   height: auto !important;
-  padding-top: 50px;
+  padding-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,4 +54,8 @@
   /* padding: 0px; */
   text-align: right !important;
   margin: 0px;
+  font-size: 25px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  color: var(--colorMain1);
 }

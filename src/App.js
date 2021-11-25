@@ -32,7 +32,9 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/carts" element={<Carts />} />
-        <Route path="/products/:id" element={<ProductDetail />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/products/5" element={<ProductDetail />} />
         <Route path="*" element={<NotFound404/>} />
       </Routes>
     </div>

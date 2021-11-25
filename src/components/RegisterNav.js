@@ -1,6 +1,7 @@
 import { LoginOutlined, UsergroupAddOutlined } from "@ant-design/icons";
 import { Menu } from "antd";
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles/RegisterNav.css";
 
 export default function RegisterNav() {
@@ -11,10 +12,14 @@ export default function RegisterNav() {
 
         <Menu onClick={() => {}} mode="horizontal" style={{ width: "100vw" }}>
           <Menu.Item key="login" icon={<LoginOutlined />}>
-            چوونەژوورەوە
+            <Link as={Link} to="/login">
+              چوونەژورەوە
+            </Link>
           </Menu.Item>
           <Menu.Item key="register" icon={<UsergroupAddOutlined />}>
-            تۆمارکردن
+            <Link as={Link} to="/register">
+              تۆمارکردن
+            </Link>
           </Menu.Item>
         </Menu>
       </div>

@@ -1,0 +1,18 @@
+.iFilterBody {
+  direction: rtl;
+  display: flex;
+  flex-direction:   column ;
+}
+
+.iDividerFilter{
+    font-weight: 900 !important;
+    color: var(--colorMain1) !important;
+}
+.ant-slider-track{
+    background-color:var(--colorMain1) !important;
+}
+
+.ant-slider-handle{
+    border-color:var(--colorMain1) !important;
+
+}

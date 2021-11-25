@@ -15,7 +15,7 @@
 }
 
 .iFiltering {
-  height: auto;
+  height: 100vh;
   width: 400px;
   background-color: var(--colorWhite);
   border-radius: 10px;
@@ -24,8 +24,8 @@
   padding: 20px;
 }
 
-.iProductCards{
-    display: flex;
-    justify-content: start;
-    flex-flow: row wrap;
+.iProductCards {
+  display: flex;
+  justify-content: start;
+  flex-flow: row wrap;
 }

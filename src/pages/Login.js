@@ -1,60 +1,82 @@
-// import React, { useState } from "react";
+import React from "react";
+import "../components/styles/login.css";
+import { FiLogIn } from "react-icons/all";
+import { Form, Input, Button, Divider } from "antd";
+import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
-// import Form from "react-bootstrap/Form";
-// import Button from "react-bootstrap/Button";
-// import Container from "react-bootstrap/Container";
-// export default function Login() {
-//   // our local user state - taibat ba componenti login , intrial value = onject
-//   const [user, setUser] = useState({});
+export default function Login() {
+  return (
+    <div className="iBodyLogin">
+      <div className="iContainerLogin">
+        <div className="iContent">
+          <div className="iLoginForm"></div>
 
-//   const handleEmail = (e) => {
-//     const emailValue = e.target.value;
-//     let newState = { ...user };
-//     newState.email = emailValue;
+          <Divider className="iDivider" orientation="right">
+            چوونەژورەوە
+          </Divider>
 
-//     setUser(newState);
-//   };
+          <Form
+            name="normal_login"
+            className="login-form"
+            initialValues={{
+              remember: true,
+            }}
+            // onFinish={onFinish}
+          >
+            <Form.Item
+              className="formItem"
+              name="username"
+              rules={[
+                {
+                  required: true,
+                  message: "تکایە ناوی بەکارهێنەر بنووسە",
+                },
+              ]}
+            >
+              <Input
+                prefix={
+                  <UserOutlined className="site-form-item-icon iconName" />
+                }
+                placeholder="ناوی بەکارهێنان"
+              />
+            </Form.Item>
+            <Form.Item
+              className="formItem"
+              name="password"
+              rules={[
+                {
+                  required: true,
+                  message: "تکایە وشەی نیهێنی بنووسە",
+                },
+              ]}
+            >
+              <Input
+                prefix={
+                  <LockOutlined className="site-form-item-icon iconName" />
+                }
+                type="password"
+                placeholder="وشەی نیهێنی"
+              />
+            </Form.Item>
 
-//   const handlePassword = (e) => {
-//     const passwordValue = e.target.value;
-//     let newState = { ...user };
-//     newState.password = passwordValue;
-
-//     setUser(newState);
-//   };
-
-//   return (
-//     <>
-//       <Container>
-//         <Form className="mt-5">
-//           <Form.Group className="mb-3" controlId="formBasicEmail">
-//             <Form.Label>Email address</Form.Label>
-//             <Form.Control
-//               type="email"
-//               placeholder="Enter email"
-//               onChange={handleEmail}
-//             />
-//             <Form.Text className="text-muted">
-//               We'll never share your email with anyone else.
-//             </Form.Text>
-//           </Form.Group>
-
-//           <Form.Group className="mb-3" controlId="formBasicPassword">
-//             <Form.Label>Password</Form.Label>
-//             <Form.Control
-//               type="password"
-//               placeholder="Password"
-//               onChange={handlePassword}
-//             />
-//           </Form.Group>
-//           <Form.Group className="mb-3" controlId="formBasicCheckbox">
-//             <Form.Check type="checkbox" label="Remember me" />
-//           </Form.Group>
-//           <Button variant="primary" type="submit">
-//             Submit
-//           </Button>
-//         </Form>
-//       </Container>
-//     </>
-//   );
-// }
+            <Form.Item>
+              <div className="iFormButton">
+                <Button
+                  //   type="primary"
+                  htmlType="submit"
+                  className="login-form-button"
+                >
+                  چوونەژوورەوە <FiLogIn style={{ marginLeft: "5px" }} />
+                </Button>
+                <div style={{ paddingTop: "10px" }}>
+                  یان <Link to="/register">خۆت تۆمار بکە</Link>
+                </div>
+              </div>
+            </Form.Item>
+          </Form>
+        </div>
+      </div>
+    </div>
+  );
+}

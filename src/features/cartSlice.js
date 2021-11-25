@@ -21,6 +21,7 @@ const cartSlice = createSlice({
           title: action.payload.title,
           description: action.payload.description,
           image: action.payload.image,
+          price:action.payload.price
         },
       ];
     },

@@ -8,6 +8,7 @@ import {
 } from "@ant-design/icons";
 import { useDispatch } from "react-redux";
 import { addProduct } from "../features/cartSlice";
+import { Link } from "react-router-dom";
 
 const { Meta } = Card;
 
@@ -16,18 +17,6 @@ export default function ProductCard(props) {
   return (
     <div>
       <Card
-        onClick={() => {
-          dispatch(
-            addProduct({
-              id:props.title,
-              title: props.title,
-              description: props.description,
-              image: props.image,
-            })
-          );
-
-          
-        }}
         className="iCard"
         hoverable
         // loading
@@ -39,16 +28,20 @@ export default function ProductCard(props) {
           />
         }
       >
-        <Meta
-          //   title="جانتای ڕەشی ئافرەتان"
-          title={props.title}
-          //   description="وردەکاری کاڵا وردەکاری  کاڵا وردەکاری کاڵا وردەکاری کاڵا"
-          description={props.description}
-        />
+        <Link to="/products/5">
+          <Meta
+            //   title="جانتای ڕەشی ئافرەتان"
+            title={props.title}
+            //   description="وردەکاری کاڵا وردەکاری  کاڵا وردەکاری کاڵا وردەکاری کاڵا"
+            description={props.description}
+          />
+        </Link>
+
         <div className="iCardFooter">
-          <p className="font_english">
-            <string> Price: 555$</string>
+          <p className="font_english" style={{ direction: "ltr" }}>
+            {props.price} IQD
           </p>
+
           <div>
             <Button
               onClick={() => {
@@ -57,6 +50,7 @@ export default function ProductCard(props) {
                     title: props.title,
                     description: props.description,
                     image: props.image,
+                    price: props.price,
                   })
                 );
               }}
