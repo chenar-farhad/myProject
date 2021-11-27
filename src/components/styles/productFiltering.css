@@ -16,3 +16,16 @@
     border-color:var(--colorMain1) !important;
 
 }
+ .iProductFilteringPrice{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+
+
+ @media only screen and (max-width: 1224px) {
+     .iFilterMobile{
+         width: 100%;
+     }
+ }

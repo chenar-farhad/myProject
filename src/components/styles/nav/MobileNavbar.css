@@ -1,22 +1,92 @@
-
-.iNa5v {
-    background-color: var(--colorMain1);
-    height: 70px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-
+.iBodyMobileNav {
+  background-color: var(--colorMain1);
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  z-index: 99;
+  margin-bottom: 50px;
+  /* box-shadow: 1px 3px 10px var(--colorWhiteShadow); */
   
+}
+
+.MobileNavTitle {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+}
+
+.iBodyMobileNav h1 {
+  text-align: left;
+  color: var(--colorWhite) !important;
+  margin: 0px;
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+.iNavMobile {
+  direction: rtl;
+  background-color: var(--colorMain1);
+  color: var(--colorWhite);
+  height: 50px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+  z-index: 999;
+}
+
+.iNavMobile Button {
+  background-color: var(--colorMain1);
+  color: var(--colorWhite);
+  border: 0;
+  width: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.iNavMobile Button:hover {
+  background-color: var(--colorMain1);
+  color: var(--colorWhite);
+  border: 0;
+  height: 100%;
+}
+
+.iNavListMobileHeadet {
+  padding-top: env(safe-area-inset-top);
+}
 .iNavListMobile ul {
-    width: 100%;
-  }
-  .iNavListMobile li {
-    /* background-color: aqua; */
-    color: var(--colorMain1) !important;
-    font-size: large;
-    font-weight: bold;
-    padding: 20px 5px;
-    border-bottom: 1px solid rgb(231, 231, 231);
-  }
+  width: 100%;
+}
+.iNavListMobile li {
+  /* background-color: aqua; */
+  color: var(--colorMain1) !important;
+  font-size: large;
+  font-weight: bold;
+  padding: 20px 5px;
+  border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+.iNavListMobile a {
+  text-decoration: none;
+  color: var(--colorBlack) !important;
+}
+
+.iMobileNavSliderFooter{
+  width: 100%;
+  height: 50px;
+  /* background-color: aqua; */
+  display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.iMobileNavSliderFooter a{
+  color: var(--colorMain1);
   
+}

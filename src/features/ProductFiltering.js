@@ -1,6 +1,6 @@
 import "../components/styles/productFiltering.css";
 import React from "react";
-import{IoWomanOutline,IoManOutline,MdChildCare, } from "react-icons/all"
+import { IoWomanOutline, IoManOutline, MdChildCare } from "react-icons/all";
 import { Divider, Checkbox, Slider, Col, Row, InputNumber } from "antd";
 
 export default function ProductFiltering() {
@@ -47,45 +47,36 @@ export default function ProductFiltering() {
       <Divider className="iDividerFilter" orientation="right">
         نرخ
       </Divider>
-      <div>
-        <Row>
-          <Col span={8}>
-            <InputNumber
-              min={0}
-              max={100000}
-              step={1000}
-              defaultValue={0}
-              style={{ margin: "0 16px" }}
-              onChange={() => {}}
-            />
-          </Col>
 
-          <Col span={8}>
-            <p style={{ textAlign: "center" }}>تا</p>
-          </Col>
+      <div className="iProductFilteringPriceParent">
+        <div className="iProductFilteringPrice">
+          <InputNumber
+            min={0}
+            max={100000}
+            step={1000}
+            defaultValue={0}
+            style={{ margin: "0 16px" }}
+            onChange={() => {}}
+          />
 
-          <Col span={8}>
-            <InputNumber
-              min={0}
-              max={100000}
-              step={1000}
-              defaultValue={50000}
-              style={{ margin: "0 16px" }}
-              onChange={() => {}}
-            />
-          </Col>
-        </Row>
-        <Row>
-          <Col span={24}>
-            <Slider
-              step={1000}
-              range={{ draggableTrack: true }}
-              defaultValue={[0, 500000]}
-              min={0}
-              max={1000000}
-            />
-          </Col>
-        </Row>
+          <p style={{ textAlign: "center" }}>تا</p>
+
+          <InputNumber
+            min={0}
+            max={100000}
+            step={1000}
+            defaultValue={50000}
+            style={{ margin: "0 16px" }}
+            onChange={() => {}}
+          />
+        </div>
+        <Slider
+          step={1000}
+          range={{ draggableTrack: true }}
+          defaultValue={[0, 500000]}
+          min={0}
+          max={1000000}
+        />
       </div>
     </div>
   );

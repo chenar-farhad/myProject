@@ -23,9 +23,9 @@ function App() {
     <div className="App noselect" style={{overflowX:"hidden"}}>
 
       {/* Navbar always shows no matter which route we're on */}
-      {/* {isTabletOrMobile && <MobileNavbar />}
-      {isBigScreen && <BigNavbar />} */}
-      <BigNavbar />
+      {isTabletOrMobile && <MobileNavbar />}
+      {isBigScreen && <BigNavbar />}
+      {/* <BigNavbar /> */}
       {/* Setting up our routes */}
       <Routes>
         <Route path="/" element={<Home />} />

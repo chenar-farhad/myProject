@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
+  "short_name": "Online Bazzar",
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "https://png.pngtree.com/png-vector/20190621/ourlarge/pngtree-shopstoremarketbuildingshopping-flat-color-icon-vector-png-image_1490507.jpg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "https://png.pngtree.com/png-vector/20190621/ourlarge/pngtree-shopstoremarketbuildingshopping-flat-color-icon-vector-png-image_1490507.jpgg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "https://png.pngtree.com/png-vector/20190621/ourlarge/pngtree-shopstoremarketbuildingshopping-flat-color-icon-vector-png-image_1490507.jpg",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -22,4 +22,6 @@
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
+
+  
 }

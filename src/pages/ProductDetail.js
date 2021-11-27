@@ -1,7 +1,7 @@
 import React from "react";
 // import { useDispatch } from "react-redux";
 import { useParams } from "react-router";
-import { Image, Skeleton, Divider, Button, Breadcrumb } from "antd";
+import { Image, Skeleton, Divider, Button, Breadcrumb,Rate } from "antd";
 import "../components/styles/ProductDetail.css";
 import { ShoppingCart } from "react-feather";
 import { HomeOutlined } from "@ant-design/icons";
@@ -90,8 +90,9 @@ export default function ProductDetail() {
                   <strong>نرخ</strong>
                 </p>
                 <h1>
-                  <strong> 500 د.ع</strong>
+                  <strong className="font_english"> 25,000 IQD</strong>
                 </h1>
+                <Rate value={4} />
               </div>
 
               <div className="iProductBtn">

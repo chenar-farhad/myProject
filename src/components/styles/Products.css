@@ -9,7 +9,7 @@
   width: 75%;
   background-color: var(--colorWhite);
   border-radius: 10px;
-  box-shadow: 1px 3px 10px rgb(236, 236, 236);
+  box-shadow: 1px 3px 10px var(--colorWhiteShadow);
   margin: 0px 10px 50px 0px;
   padding: 20px;
 }
@@ -19,7 +19,7 @@
   width: 400px;
   background-color: var(--colorWhite);
   border-radius: 10px;
-  box-shadow: 1px 3px 10px rgb(236, 236, 236);
+  box-shadow: 1px 3px 10px var(--colorWhiteShadow);
   margin: 0px 0px 50px 10px;
   padding: 20px;
 }
@@ -29,3 +29,89 @@
   justify-content: start;
   flex-flow: row wrap;
 }
+
+
+.iFilterMobileFilter , .iFilterMobile{
+  display: none;
+}
+
+
+
+/* START mobile And Tablet */
+
+@media only screen and (max-width: 1224px) {
+  .iFiltering {
+    display: none;
+  }
+  .iProductCards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .iContainerProducts {
+    width: 95% !important;
+    flex-direction: column !important;
+  }
+
+  .iItems {
+    width: 100% !important;
+    padding: 0px;
+  }
+
+  .iFilterMobile {
+    height: 50px;
+    width: 100%;
+    background-color: var(--colorWhite);
+    box-shadow: 1px 3px 10px var(--colorWhiteShadow);
+
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  .iFilterMobile{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+  .iFilterMobileFilter{
+    direction: rtl;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin:0 15px 15px 0 !important;
+    color: var(--colorMain1);
+    /* text-align: right; */
+
+  }
+  .iFilterMobileFilter Button{
+    background-color: transparent;
+    color: var(--colorMain1);
+    display: flex;
+    flex-direction: row;
+    border-radius: 50px;
+    border: 0px;
+  }
+  .iFilterMobileFilter Button:hover{
+    background-color: var(--colorMain1);
+    color: var(--colorWhite) ;
+    border: 0px;
+  }
+
+  .iFilterMobileFilter p{
+    margin:0px ;
+  }
+  .iHomeSearch{
+    width:  100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  
+  .iFilterMobileSearch{
+    width: 90% !important;
+  }
+}
+
+/* END mobile And Tablet */

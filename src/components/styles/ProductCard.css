@@ -11,6 +11,7 @@
   overflow: hidden;
   text-align: right;
   direction: rtl;
+  background-color: var(--colorWhite) !important;
 
 }
 .iCard img {
@@ -42,12 +43,13 @@
 
 .iCardFooter {
   height: auto !important;
-  padding-top: 30px;
+  padding-top: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 100%;
+
 }
 
 .iCardFooter p {
@@ -59,3 +61,50 @@
   padding-bottom: 10px;
   color: var(--colorMain1);
 }
+
+.iCardDetail {
+  width: 200px;
+  height: 85px;
+  padding: 10px !important;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* START mobile And Tablet */
+@media only screen and (max-width: 1224px) {
+  .iCard {
+    width: 150px !important;
+    height: 300px !important;
+  }
+
+  .iCardDetail {
+    width: 150px;
+    height: 110px;
+    /* padding: 10px !important; */
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+  }
+
+  .iCard img {
+    padding: 5px;
+    width: auto !important;
+    height: 100px !important;
+    
+  }
+
+  .iCardFooter{
+    padding-bottom: 5px;
+  }
+  .iCardFooter p {
+    font-size: 15px;
+  }
+
+  .iCard .ant-card-body{
+    padding-top: 0px !important; 
+  }
+}
+/* END mobile And Tablet */

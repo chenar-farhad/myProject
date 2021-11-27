@@ -1,3 +1,10 @@
+@media only screen and (max-width: 1224px) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    background-color: var(--colorMain1) !important;
+  }
+}
+
 @font-face {
   font-family: "Speda";
   src: url("./fonts/Speda.eot"); /* IE9 Compat Modes */
@@ -19,10 +26,18 @@
 * {
   font-family: "Speda";
 
+  /* --colorMain1: #3fd1a5; */
   --colorWhite: rgb(255, 255, 255);
+  --colorBlack: #353535;
   --colorBg: #f2f2f5;
   --colorMain1: #d13f3f;
-  /* --colorMain1: #3fd1a5; */
+  --colorWhiteShadow: rgb(231, 231, 231);
+
+  /* --colorWhite: rgb(77, 77, 77);
+  --colorBlack: #ffffff;
+  --colorBg: #353535;
+  --colorMain1: #d13f3f;
+  --colorWhiteShadow:rgb(48, 48, 48); */
 }
 
 .noselect {
@@ -47,11 +62,15 @@ body {
   background-color: var(--colorBg);
   height: auto;
   width: 100vw;
-  padding-top: 50px;
+  padding-top: 80px;
 }
 
 .iContainer {
-  width: 90%;
+  width:95%;
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
 }
 
 footer {
