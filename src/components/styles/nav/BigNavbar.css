@@ -4,19 +4,25 @@
   display: flex;
   justify-content: center;
   align-items: end;
+  box-shadow: 1px 3px 10px var(--colorWhiteShadow);
 }
-.iBigNav ul{
+
+.iBigNavParent .ant-affix {
+  background-color: var(--colorWhite) !important;
+}
+.iBigNav ul {
   color: var(--colorMain1);
   font-size: larger;
   height: 50px;
   margin-left: 200px;
+  text-decoration: ;
 }
 
- .iBigNav a{
+.iBigNav a {
   color: var(--colorMain1) !important;
 }
-.iBigNav a:hover{
-color: #1890ff !important;
+.iBigNav a:hover {
+  color: #1890ff !important;
 }
 /* start search */
 .iHomeSearch {

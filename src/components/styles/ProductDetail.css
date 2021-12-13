@@ -44,8 +44,8 @@
 }
 
 .iProductDetailPrice h1 {
-    font-size: 25px;
-    color: var(--colorMain1);
+  font-size: 25px;
+  color: var(--colorMain1);
 }
 
 .iProductBtn {
@@ -103,43 +103,52 @@
   margin: 0px 0px 50px 0px;
   padding: 20px;
 }
- 
 
-
+.iProductStoreProfileParent {
+  height: 200px;
+  background-color: var(--colorWhite);
+  border-radius: 10px;
+  box-shadow: 1px 3px 10px var(--colorWhiteShadow);
+  margin: 0px 0px 20px 0px;
+  padding: 20px;
+}
+.iProductStoreProfile{
+  display: flex;
+  justify-content: right;
+  direction: rtl;
+}
 /* START mobile And Tablet */
 
 @media only screen and (max-width: 1224px) {
-.iProductDetails{
-  display: flex;
-  flex-direction: column;
-}
+  .iProductDetails {
+    display: flex;
+    flex-direction: column;
+  }
 
+  .iProductImageSmall {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-.iProductImageSmall{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
+  .iProductImageSmall img {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50px;
+    height: 50px;
+  }
+  .iProductImageSmall .ant-image {
+    width: 50px !important;
+    height: 50px;
+    text-align: center;
+  }
 
-.iProductImageSmall img{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 50px;
-  height: 50px;
-
-}
- .iProductImageSmall .ant-image {
-  width: 50px !important;
-  height: 50px;
-  text-align: center;
-}
-
-.iProductDetailHeader h1{
-  padding-top: 30px;
-  font-weight: bold;
-}
+  .iProductDetailHeader h1 {
+    padding-top: 30px;
+    font-weight: bold;
+  }
 }

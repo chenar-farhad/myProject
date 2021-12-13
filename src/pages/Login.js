@@ -9,7 +9,7 @@ export default function Login() {
   return (
     <div className="iBodyLogin">
       <div className="iContainerLogin">
-        <div className="iContent">
+        <div className="iContentLogin">
           <div className="iLoginForm"></div>
 
           <Divider className="iDivider" orientation="right">

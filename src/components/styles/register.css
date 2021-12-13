@@ -1,19 +1,19 @@
-.iContainerLogin {
+.iContainerRegister {
   width: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.iBodyLogin {
-  height: 75vh;
+.iBodyRegister {
+  height: 100vh;
   background-color: var(--colorBg);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.iContent {
+.iContentRegister {
   background-color: var(--colorWhite) !important;
   padding: 100px;
   border-radius: 10px;
@@ -22,22 +22,22 @@
   box-shadow: 1px 3px 10px var(--colorWhiteShadow);
 }
 
-.iContent .iconName {
+.iContentRegister .iconName {
   color: var(--colorMain1);
 }
 
-.iContent .formItem {
+.iContentRegister .formItem {
   text-align: right !important;
   padding-bottom: 10px;
 }
 
-.iContent Input {
+.iContentRegister Input {
   direction: rtl !important;
   height: 30px;
   border: 0px !important;
 }
 
-.iContent Button {
+.iContentRegister Button {
   background-color: var(--colorMain1);
   border: 1 solid var(--colorMain1);
   color: var(--colorWhite);
@@ -50,26 +50,37 @@
   align-items: center;
   box-shadow: 1px 3px 10px var(--colorWhiteShadow);
 }
-.iContent Button:hover {
+.iContentRegister Button:hover {
   background-color: var(--colorBg);
   color: var(--colorMain1);
   border: 1px solid var(--colorMain1);
   box-shadow: 1px 3px 10px var(--colorWhiteShadow);
 }
 
-.iContent button:focus {
+.iContentRegister button:focus {
   background-color: var(--colorMain1);
   color: var(--colorWhite);
 }
 
-.iContent a,
-.iContent a:hover {
+.iContentRegister a,
+.iContentRegister a:hover {
   color: var(--colorMain1);
 }
 
-.iBodyLogin .iFormButton {
+.iBodyRegister .iFormButtonRegister {
   display: flex !important;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+/* START mobile And Tablet */
+@media only screen and (max-width: 1224px) {
+  .iContentRegister {
+    padding: 30px 10px 0px 10px;
+  }
+
+  .iFormButtonRegister {
+    padding-top: 20px !important;
+  }
 }

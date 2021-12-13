@@ -1,0 +1,122 @@
+.iProfileBody {
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  background-color: var(--colorBg);
+  display: flex;
+  justify-content: center;
+}
+.iProfileContainer {
+  margin-top: 80px;
+  width: 80%;
+}
+
+.iProfileContent {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  border-radius: 10px;
+  background-color: var(--colorWhite);
+  box-shadow: 1px 3px 10px var(--colorWhiteShadow);
+  padding: 10px;
+}
+.iProfileContentHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  height: auto;
+  width: 90%;
+  padding-top: 100px;
+}
+.iProfileContent .iProfileSettingIcon {
+  color: var(--colorMain1);
+  position: absolute;
+  /* z-index: 0; */
+  right: 10%;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.iProfileContent .iProfileSettingIcon:hover {
+  background-color: var(--colorBg);
+  color: var(--colorMain1);
+}
+
+.iProfileImages {
+  border: 5px solid var(--colorMain1);
+  background-color: var(--colorMain1);
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  margin-top: -50px;
+  box-shadow: 1px 3px 10px var(--colorWhiteShadow);
+}
+.iProfileImages img {
+  height: 100%;
+}
+.iProfileBody .iProfileStoreDes {
+  width: 90%;
+  /* height: auto; */
+  flex: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.iProfileStoreDes .storeName {
+  color: var(--colorMain1);
+  font-family: speda-Bold;
+  font-size: 50px;
+}
+.iProfileStoreDes .storeLocation {
+  color: var(--colorBlack);
+  font-weight: bold;
+}
+.iProfileStoreDes .storeBio {
+  padding: 20px;
+  color: var(--colorBlack);
+  font-size: 20px;
+}
+.iProfileProducts {
+  padding: 20px 30px;
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  background-color: var(--colorWhite);
+  box-shadow: 1px 3px 10px var(--colorWhiteShadow);
+}
+/* START mobile And Tablet */
+@media only screen and (max-width: 1224px) {
+  .iProfileContainer {
+    margin-top: 100px;
+  }
+  .iProfileContent {
+    margin-top: 10px;
+  }
+  .iProfileStoreDes .storeName {
+    color: var(--colorMain1);
+    font-family: speda-Bold;
+    font-size: 30px;
+  }
+  .iProfileStoreDes .storeLocation {
+    color: var(--colorBlack);
+    font-weight: bold;
+    font-size: 10px !important;
+  }
+  .iProfileStoreDes .storeBio {
+    padding: 20px;
+    color: var(--colorBlack);
+    font-size: 15px;
+  }
+
+  .iProfileContent .iProfileSettingIcon {
+    right: 10%;
+    /* margin-top: 5px; */
+    /* margin-right: 10px; */
+padding: 5px;
+  }
+}

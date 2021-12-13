@@ -1,45 +1,43 @@
-
-.iContainerLogin{
-    width:   75%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.iContainerLogin {
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.iBodyLogin{
-    height: 75vh;
-    background-color: var(--colorBg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.iBodyLogin {
+  height: 100vh;
+  background-color: var(--colorBg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.iContent {
+.iContentLogin {
   background-color: var(--colorWhite) !important;
   padding: 100px;
   border-radius: 10px;
   margin-bottom: 20px;
   width: 1000px;
   box-shadow: 1px 3px 10px var(--colorWhiteShadow);
-
 }
 
-.iContent .iconName{
-    color: var(--colorMain1);
+.iContentLogin .iconName {
+  color: var(--colorMain1);
 }
 
-.iContent .formItem {
+.iContentLogin .formItem {
   text-align: right !important;
   padding-bottom: 10px;
 }
 
-.iContent Input {
+.iContentLogin Input {
   direction: rtl !important;
   height: 30px;
   border: 0px !important;
 }
 
-.iContent Button {
+.iContentLogin Button {
   background-color: var(--colorMain1);
   border: 1 solid var(--colorMain1);
   color: var(--colorWhite);
@@ -51,28 +49,38 @@
   justify-content: center;
   align-items: center;
   box-shadow: 1px 3px 10px var(--colorWhiteShadow);
-
 }
-.iContent Button:hover {
+.iContentLogin Button:hover {
   background-color: var(--colorBg);
   color: var(--colorMain1);
   border: 1px solid var(--colorMain1);
   box-shadow: 1px 3px 10px var(--colorWhiteShadow);
-
 }
 
-.iContent button:focus{
-    background-color: var(--colorMain1);
-    color: var(--colorWhite);
+.iContentLogin button:focus {
+  background-color: var(--colorMain1);
+  color: var(--colorWhite);
 }
 
-.iContent a , .iContent a:hover{
+.iContentLogin a,
+.iContentLogin a:hover {
   color: var(--colorMain1);
-} 
+}
 
-.iBodyLogin .iFormButton{
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.iBodyLogin .iFormButton {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* START mobile And Tablet */
+@media only screen and (max-width: 1224px) {
+  .iContentLogin {
+    padding: 30px 10px 0px 10px;
+  }
+
+  .iFormButton {
+    padding-top: 20px !important;
+  }
 }

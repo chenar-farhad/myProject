@@ -7,19 +7,22 @@ export default function Carts() {
   const products = useSelector((state) => state.cart.products);
   return (
     <div className="iBodyCart">
-      <div className="iCarts">
-        {products.map((p, index) => {
-          return (
-            <div>
-              <CartCard
-                title={p.title}
-                description={p.description}
-                image={p.image}
-                index={index}
-              />
-            </div>
-          );
-        })}
+      <div className="iCartContainer">
+        <div className="iCarts">
+          {products.map((p, index) => {
+            return (
+              <div>
+                <CartCard
+                  title={p.title}
+                  description={p.description}
+                  image={p.image}
+                  index={index}
+                  price={p.price}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

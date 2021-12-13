@@ -14,19 +14,22 @@ import { useMediaQuery } from "react-responsive";
 import NotFound404 from "./pages/NotFound404";
 import Carts from "./pages/Carts";
 import ProductDetail from "./pages/ProductDetail";
+import ScrollToTop from "./features/ScrollToTop";
+import Profile from "./pages/Profile";
 
 function App() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
   const isBigScreen = useMediaQuery({ query: "(min-width: 1224px)" });
 
   return (
-    <div className="App noselect" style={{overflowX:"hidden"}}>
-
+    <div className="App noselect" style={{ overflowX: "hidden" }}>
       {/* Navbar always shows no matter which route we're on */}
       {isTabletOrMobile && <MobileNavbar />}
       {isBigScreen && <BigNavbar />}
       {/* <BigNavbar /> */}
       {/* Setting up our routes */}
+
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
@@ -34,8 +37,9 @@ function App() {
         <Route path="/carts" element={<Carts />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/products/5" element={<ProductDetail />} />
-        <Route path="*" element={<NotFound404/>} />
+        <Route path="*" element={<NotFound404 />} />
       </Routes>
     </div>
   );

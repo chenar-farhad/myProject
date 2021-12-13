@@ -15,7 +15,8 @@
 }
 
 .iFiltering {
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   width: 400px;
   background-color: var(--colorWhite);
   border-radius: 10px;
@@ -26,16 +27,14 @@
 
 .iProductCards {
   display: flex;
-  justify-content: start;
+  justify-content: space-around;
   flex-flow: row wrap;
 }
 
-
-.iFilterMobileFilter , .iFilterMobile{
+.iFilterMobileFilter,
+.iFilterMobile {
   display: none;
 }
-
-
 
 /* START mobile And Tablet */
 
@@ -68,23 +67,21 @@
     margin-bottom: 20px;
     border-radius: 10px;
   }
-  .iFilterMobile{
+  .iFilterMobile {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
   }
-  .iFilterMobileFilter{
+  .iFilterMobileFilter {
     direction: rtl;
     display: flex;
     align-items: center;
     justify-content: right;
-    margin:0 15px 15px 0 !important;
+    margin: 0 15px 15px 0 !important;
     color: var(--colorMain1);
     /* text-align: right; */
-
   }
-  .iFilterMobileFilter Button{
+  .iFilterMobileFilter Button {
     background-color: transparent;
     color: var(--colorMain1);
     display: flex;
@@ -92,24 +89,23 @@
     border-radius: 50px;
     border: 0px;
   }
-  .iFilterMobileFilter Button:hover{
+  .iFilterMobileFilter Button:hover {
     background-color: var(--colorMain1);
-    color: var(--colorWhite) ;
+    color: var(--colorWhite);
     border: 0px;
   }
 
-  .iFilterMobileFilter p{
-    margin:0px ;
+  .iFilterMobileFilter p {
+    margin: 0px;
   }
-  .iHomeSearch{
-    width:  100%;
+  .iHomeSearch {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  
-  .iFilterMobileSearch{
+  .iFilterMobileSearch {
     width: 90% !important;
   }
 }

@@ -8,7 +8,7 @@ export default function ProductFiltering() {
     console.log(`checked = ${e.target.checked}`);
   }
   return (
-    <div>
+    <div className="iFilterBodyParent">
       <Divider className="iDividerFilter" orientation="right">
         جیاکردنەوە
       </Divider>

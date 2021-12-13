@@ -8,7 +8,8 @@ export default function NotFound404() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "70vh",
+        height: "100vh",
+        backgroundColor:"var(--colorBg)"
       }}
     >
       <Empty

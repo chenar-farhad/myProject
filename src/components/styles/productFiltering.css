@@ -1,31 +1,29 @@
 .iFilterBody {
   direction: rtl;
   display: flex;
-  flex-direction:   column ;
-}
-
-.iDividerFilter{
-    font-weight: 900 !important;
-    color: var(--colorMain1) !important;
-}
-.ant-slider-track{
-    background-color:var(--colorMain1) !important;
-}
-
-.ant-slider-handle{
-    border-color:var(--colorMain1) !important;
+  flex-direction: column;  
 
 }
- .iProductFilteringPrice{
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
- }
 
+.iDividerFilter {
+  font-weight: 900 !important;
+  color: var(--colorMain1) !important;
+}
+.ant-slider-track {
+  background-color: var(--colorMain1) !important;
+}
 
+.ant-slider-handle {
+  border-color: var(--colorMain1) !important;
+}
+.iProductFilteringPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
- @media only screen and (max-width: 1224px) {
-     .iFilterMobile{
-         width: 100%;
-     }
- }
+@media only screen and (max-width: 1224px) {
+  .iFilterMobile {
+    width: 100%;
+  }
+}

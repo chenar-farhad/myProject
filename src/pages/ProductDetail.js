@@ -1,11 +1,21 @@
 import React from "react";
 // import { useDispatch } from "react-redux";
 import { useParams } from "react-router";
-import { Image, Skeleton, Divider, Button, Breadcrumb,Rate } from "antd";
+import {
+  Image,
+  Skeleton,
+  Divider,
+  Button,
+  Breadcrumb,
+  Rate,
+  Card,
+  Avatar,
+} from "antd";
 import "../components/styles/ProductDetail.css";
 import { ShoppingCart } from "react-feather";
 import { HomeOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
+import Meta from "antd/lib/card/Meta";
 
 export default function ProductDetail() {
   // const dispatch = useDispatch();
@@ -82,7 +92,7 @@ export default function ProductDetail() {
                   قووڵایی: 11سم. تایبەتمەندی داخستنی زینجری هەیە. لە بەشی پێشەوە
                   1 گیرفانێکی زیپکراو هەیە بۆ هەلگرتنی تەلەفۆن یا هەرشتێکی تر.
                   گیرفانێکی ناوەوەی زیپکراو هەیە بۆ هەڵگرتنی شتەکان. گەرەنتی ٢
-                  ساڵی لەگەڵ دایە. لە تورکیا دروست کراوە.{" "}
+                  ساڵی لەگەڵ دایە. لە تورکیا دروست کراوە.
                 </p>
               </div>
               <div className="iProductDetailPrice">
@@ -107,6 +117,20 @@ export default function ProductDetail() {
                   icon={<ShoppingCart size="20" />}
                 />
               </div>
+            </div>
+          </div>
+          <div className="iProductStoreProfileParent">
+            <Divider className="iDivider" orientation="right">
+              فڕۆشیار
+            </Divider>
+            <div className="iProductStoreProfile">
+              <Card style={{ width: 300 }}>
+                <Meta
+                  avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
+                  title="Card title"
+                  description="This is the description"
+                />
+              </Card>
             </div>
           </div>
           <div className="iProductComment">

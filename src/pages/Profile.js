@@ -1,51 +1,40 @@
-import React, { useState } from "react";
-import { Divider, Drawer, Button } from "antd";
+import "../components/styles/profile.css";
+import React from "react";
+import ProfilePicture from "../components/profilePicture";
+import { Skeleton, Divider, Carousel, Avatar } from "antd";
+import { HiLocationMarker, FiSettings, BsTelephone } from "react-icons/all";
 import ProductCard from "../components/ProductCard";
-import ProductFiltering from "../features/ProductFiltering";
-import "../components/styles/Products.css";
-import { BsFilterRight } from "react-icons/bs";
-import HomeSearch from "../features/HomeSearch";
-
-export default function Products() {
-  const [visible, setVisible] = useState(false);
-  const showDrawer = () => {
-    setVisible(true);
-  };
-
-  const onClose = () => {
-    setVisible(false);
-  };
+export default function Profile() {
   return (
-    <div className="iBody">
-      <div className="iContainerProducts">
-        <div className="iFilterMobile">
-          <div className="iFilterMobileSearch">
-            <HomeSearch />
+    <div className="iProfileBody">
+      <div className="iProfileContainer">
+        <div className="iProfileContent">
+          {/* <FiSettings size={30} className="iProfileSettingIcon" /> */}
+          <div className="iProfileImages">
+            {/* <ProfilePicture /> */}
+            <Avatar
+              size={120}
+              src="https://static.nike.com/a/images/f_auto/15feea01-6923-4310-a0d6-f4c3717b52b9/image.jpeg"
+            />
+          </div>
+          
+          <div className="iProfileContentHeader">
+            <div className="iProfileStoreDes">
+              <h1 className="storeName">مۆبایلی ئاری</h1>
+              <h2 className="storeLocation">
+                <HiLocationMarker color="var(--colorMain1)" />
+                سلێمانی سەرو مزگەوتی گەورە
+              </h2>
+
+              <p className="storeBio">
+                زانیاریەکانتیاسفدگ دگدفگ فبف بدفنه رتندف ەر٥ی هفگبهفگبهفگبهفگب
+                زانیاریەکانتیاسفدگ دگدفگ فبف بدفنه رتندف ەر٥ی هفگبهفگبهفگبهفگب
+              </p>
+            </div>
           </div>
         </div>
-        <div className="iFilterMobileFilter">
-          {/* <BsFilterRight size={25} /> */}
-
-          <Button onClick={showDrawer}>
-            <BsFilterRight size={25} />
-            <p>جیاکردنەوە</p>
-          </Button>
-          <Drawer
-            className="iFilterListMobileHeadet"
-            title={
-              <h4>
-                <strong>جیاکردنەوە</strong>
-              </h4>
-            }
-            placement="right"
-            onClose={onClose}
-            visible={visible}
-          >
-            <ProductFiltering />
-          </Drawer>
-        </div>
-        <div className="iItems">
-          <Divider className="iDivider" orientation="right">
+        <div className="iProfileProducts">
+          <Divider className="iDivider" orientation="center">
             کاڵاکان
           </Divider>
           <div className="iProductCards">
@@ -128,9 +117,6 @@ export default function Products() {
               price="22,000"
             />
           </div>
-        </div>
-        <div className="iFiltering">
-          <ProductFiltering />
         </div>
       </div>
     </div>

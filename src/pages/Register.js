@@ -1,24 +1,23 @@
 import React from "react";
 import "../components/styles/register.css";
-import { FiLogIn } from "react-icons/all";
 import { Form, Input, Button, Divider } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import { MdAlternateEmail,AiOutlineUserAdd } from "react-icons/all";
+import { MdAlternateEmail, AiOutlineUserAdd } from "react-icons/all";
 export default function Register() {
   return (
-    <div className="iBodyLogin">
-      <div className="iContainerLogin">
-        <div className="iContent">
-          <div className="iLoginForm"></div>
+    <div className="iBodyRegister">
+      <div className="iContainerRegister">
+        <div className="iContentRegister">
+          <div className="iRegisterForm"></div>
 
           <Divider className="iDivider" orientation="right">
             دروستکردنی هەژماری نوێ
           </Divider>
 
           <Form
-            name="normal_login"
-            className="login-form"
+            name="normal_register"
+            className="register-form"
             initialValues={{
               remember: true,
             }}
@@ -81,7 +80,7 @@ export default function Register() {
             </Form.Item>
 
             <Form.Item>
-              <div className="iFormButton">
+              <div className="iFormButtonRegister">
                 <Button
                   //   type="primary"
                   htmlType="submit"

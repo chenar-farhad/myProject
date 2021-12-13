@@ -1,5 +1,5 @@
 .iBodyMobileNav {
-  background-color: var(--colorMain1);
+  background: var(--colorMain1);
   display: flex;
   position: fixed;
   justify-content: center;
@@ -8,8 +8,7 @@
   width: 100%;
   z-index: 99;
   margin-bottom: 50px;
-  /* box-shadow: 1px 3px 10px var(--colorWhiteShadow); */
-  
+  box-shadow: 1px 3px 10px var(--colorWhiteShadow);
 }
 
 .MobileNavTitle {
@@ -37,6 +36,7 @@
   justify-content: center;
   flex-flow: row wrap;
   z-index: 999;
+
 }
 
 .iNavMobile Button {
@@ -59,17 +59,16 @@
 }
 
 .iNavListMobileHeadet {
-  padding-top: env(safe-area-inset-top);
+  /* padding-top: env(safe-area-inset-top); */
 }
 .iNavListMobile ul {
   width: 100%;
 }
 .iNavListMobile li {
-  /* background-color: aqua; */
   color: var(--colorMain1) !important;
   font-size: large;
   font-weight: bold;
-  padding: 20px 5px;
+  padding: 20px 10px;
   border-bottom: 1px solid rgb(231, 231, 231);
 }
 
@@ -78,15 +77,56 @@
   color: var(--colorBlack) !important;
 }
 
-.iMobileNavSliderFooter{
+.iMobileNavSliderHeader {
+  padding: 30px 10px 10px 10px;
+  margin-bottom: 20px;
   width: 100%;
-  height: 50px;
-  /* background-color: aqua; */
+  height: auto;
+  background: var(--colorMain2);
   display: flex;
-justify-content: space-between;
-align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 1px 3px 14px rgb(172, 171, 171);
+  border-radius: 0px 0px 30px 30px;
 }
-.iMobileNavSliderFooter a{
-  color: var(--colorMain1);
-  
+
+.iMobileNavSliderHeaderAvatar {
+  border: 3px solid var(--colorWhite) !important;
+}
+.iMobileNavSliderHeaderDes {
+  padding: 20px 10px 10px 20px !important;
+  padding: 10px;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--colorGray);
+}
+
+.iMobileNavSliderHeaderDes a {
+  color: var(--colorWhite);
+}
+
+.iNavListMobileHeadet .ant-drawer-content-wrapper .ant-drawer-body {
+  /*body mobail menuaka*/
+  padding: 0px !important;
+  background-color: var(--colorWhite);
+}
+
+.iNavListMobileHeadet .ant-drawer-content-wrapper .ant-drawer-header {
+  /* headeri closaka*/
+  padding: 1px;
+  background-color: var(--colorMain1) !important;
+  border: 1px solid var(--colorMain1) !important;
+  color: white !important;
+}
+
+.iNavListMobileHeadet .ant-drawer-content-wrapper .ant-drawer-close {
+  /* buttoni closaka*/
+
+  color: var(--colorWhite) !important;
+  /* padding: 0 5px 0 0 !important; */
+  /* height: 100%; */
 }

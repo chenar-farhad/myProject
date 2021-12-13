@@ -1,6 +1,6 @@
 @media only screen and (max-width: 1224px) {
   body {
-    padding-top: env(safe-area-inset-top);
+    /* padding-top: env(safe-area-inset-top); */
     background-color: var(--colorMain1) !important;
   }
 }
@@ -15,9 +15,23 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Speda-Bold";
+  src: url("./fonts/Speda-Bold.eot"); /* IE9 Compat Modes */
+  src: url("./fonts/Speda-Bold.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("./fonts/Speda-Bold.ttf") format("truetype"),
+    /* Safari, Android, iOS */ url("./fonts/Speda-Bold.woff") format("woff"); /* Modern Browsers */
+  font-weight: bold;
+  font-style: normal;
+}
+
 .font_kurdish {
   font-family: "Speda";
 }
+.font_kurdishBold {
+  font-family: "Speda";
+}
+
 .font_english {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
@@ -29,9 +43,15 @@
   /* --colorMain1: #3fd1a5; */
   --colorWhite: rgb(255, 255, 255);
   --colorBlack: #353535;
+  --colorGray: #ffffffb0;
   --colorBg: #f2f2f5;
   --colorMain1: #d13f3f;
-  --colorWhiteShadow: rgb(231, 231, 231);
+  --colorWhiteShadow: rgba(0, 0, 0, 0.080);
+  --colorMain2: linear-gradient(
+    35deg,
+    rgb(255, 113, 113) 0%,
+    rgba(209, 63, 63, 1) 50%
+  );
 
   /* --colorWhite: rgb(77, 77, 77);
   --colorBlack: #ffffff;
@@ -52,6 +72,7 @@
 
 body {
   overflow-x: hidden;
+  height: 100vh;
 }
 
 .iBody {
@@ -62,11 +83,11 @@ body {
   background-color: var(--colorBg);
   height: auto;
   width: 100vw;
-  padding-top: 80px;
+  padding-top: 50px;
 }
 
 .iContainer {
-  width:95%;
+  width: 95%;
   display: flex;
   justify-content: center;
 

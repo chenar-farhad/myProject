@@ -1,20 +1,13 @@
 import { Carousel } from "antd";
 import React from "react";
-
-const contentStyle = {
-  height: "260px",
-  color: "#fff",
-  lineHeight: "360px",
-  textAlign: "center",
-  background: "#3fd1a5",
-};
+import "../components/styles/home.css";
 
 export default function HomeSlider() {
   return (
     <div className="iHomeSlider">
-      <Carousel autoplay >
+      <Carousel className="iHomeSliderCarousel" autoplay>
         <div>
-          <img 
+          <img
             src="https://m2pwa.elryan.com/media/vaimo/carousel/images/_/-/_-__1.jpeg"
             alt="img"
           />
@@ -39,7 +32,6 @@ export default function HomeSlider() {
           />
         </div>
       </Carousel>
-      ,
     </div>
   );
 }

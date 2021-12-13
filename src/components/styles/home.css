@@ -1,25 +1,35 @@
 .iDivider {
   color: var(--colorMain1) !important;
 }
+
+.iHomeSlider {
+  width: 50%;
+}
 .iHomeSlider img {
   width: 100%;
+  border-radius: 10px !important;
+  overflow: hidden;
 }
 
-
 .iHomeHero {
-  width: 99%;
+  width: 100%;
   height: auto;
   background-color: var(--colorWhite);
   border-radius: 10px;
   box-shadow: 1px 3px 10px var(--colorWhiteShadow);
-  margin: 0px 0px 50px 0px;
+  margin: 0px 0px 20px 0px;
   padding: 20px;
 
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.iHomeTopViewer{
+.iHomeTopViewer {
+  width: 100%;
+  /* height: 300px; */
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
 }
@@ -28,9 +38,10 @@
   padding: 0px;
   margin: 0px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 700px;
+  /* width: 700px; */
+  width: 1000px;
 }
 
 .iHomeProducts {
@@ -38,9 +49,8 @@
   background-color: var(--colorWhite);
   border-radius: 10px;
   box-shadow: 1px 3px 10px var(--colorWhiteShadow);
-  margin: 50px 0px 50px 0px;
+  margin: 20px 0px 40px 0px;
   padding: 5px;
-
 }
 
 .iStores {
@@ -48,15 +58,63 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin: 40px 0px 40px 0px;
+  margin: 20px 0px 20px 0px;
 }
 
-.iHomeStores {
-  height: auto;
+.iHomeStores,
+.iHomeCategorys {
+  height: 300px;
   width: 100%;
   background-color: var(--colorWhite);
   border-radius: 10px;
   box-shadow: 1px 3px 10px var(--colorWhiteShadow);
   padding: 20px;
-  margin: 10px;
+}
+
+.iHomeStores {
+  margin: 0 0 0 5px;
+  overflow: hidden;
+}
+.iHomeStoreContent,
+.iHomeCategorysContent {
+  /* background-color: antiquewhite; */
+  overflow: hidden;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap row;
+  height: 170px;
+}
+.iHomeStoreContent Button,
+.iHomeCategorysContent Button {
+  margin: 5px;
+  border: 1px solid var(--colorMain1);
+  color: var(--colorMain1);
+  border-radius: 5px;
+}
+.iHomeStoreContent Button:hover,
+.iHomeCategorysContent Button:hover {
+  box-shadow: 1px 3px 10px var(--colorWhiteShadow);
+  border: 1px solid var(--colorMain1);
+  background: var(--colorMain1);
+  color: var(--colorWhite);
+}
+.iHomeCategorys {
+  margin: 0 5px 0 0;
+  width: 60%;
+}
+
+/* START mobile And Tablet */
+@media only screen and (max-width: 1224px) {
+  .iHomeHero {
+    margin: 0px 0px 10px 0px;
+  }
+  .iHomeProducts {
+    margin: 10px 0px 10px 0px;
+  }
+  .iStores {
+    margin: 10px 0px 10px 0px;
+  }
+  .iHomeSlider {
+    width: 100%;
+  }
 }

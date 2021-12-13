@@ -1,23 +1,62 @@
-/* img{
-    height: 200px !important;
-    border-radius: 30px;
-    padding: 20px;
-} */
-
 .iCartCard {
-  width: 100% !important;
+  /* width: 100%; */
+  margin: 10px 0px 10px 0px !important;
+  border-radius: 10px !important;
+  max-height: 320px !important;
+  box-shadow: 1px 3px 10px var(--colorWhiteShadow);
+  overflow: hidden;
+}
+.iCartCardDes {
+  text-align: right;
+  display: flex;
+  justify-content: right;
+  align-items: flex-start;
+  flex-direction: row;
+  height: auto;
+  max-height: 120px;
+}
+.iCartCardDesImage img {
+  height: auto;
+  width: 75px;
+  border-radius: 5px;
+}
+
+.iCartCardDesTextTitle {
+  direction: rtl;
+  font-size: 16px;
+  max-height: 60px;
+  overflow: hidden !important;
+  padding-bottom: 5px;
+  font-family: "Speda-Bold";
+}
+.iCartCardDesPrice {
+  text-align: center;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
-  /* display: flex;
-    justify-content: center !important;
-    align-items: center;
-    flex-direction: row;
-    width: 80% !important;
+  align-items: center;
+  font-size: 60%;
+  margin: 24px 0 0 0;
+}
 
-    background-color: var(--colorWhite);
-    border-radius: 10px !important;
-    box-shadow: 1px 3px 10px rgb(236, 236, 236);
-    margin: 50px 0px 50px 0px;
-    padding: 20px;  */
+.iCartCardDesPrice p {
+  padding: 5px;
+  padding-top: 20px !important;
+  font-size: 20px;
+}
+.iCartCardDesTextPrice {
+  font-weight: bold;
+  color: var(--colorMain1);
+  padding: 0 10px;
+  margin-left: 5px;
+  border: 1px solid var(--colorMain1);
+}
+
+.iCartCardDesText {
+  padding: 0 20px 0 20px;
+  width: 100%;
+}
+.iCartCardDesText .iCartCardDesTextDes {
+  max-height: 45px !important;
+
+  overflow: hidden;
 }

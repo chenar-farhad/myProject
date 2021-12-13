@@ -15,7 +15,7 @@ const { Meta } = Card;
 export default function ProductCard(props) {
   const dispatch = useDispatch();
   return (
-    <div>
+    <div className="iCardContainer">
       <Card
         className="iCard"
         hoverable
@@ -54,9 +54,9 @@ export default function ProductCard(props) {
               }}
               icon={<ShoppingCartOutlined />}
             ></Button>
-            <Button icon={<HeartOutlined />}></Button>
+            {/* <Button icon={<HeartOutlined />}></Button> */}
             <Tooltip title="Share">
-              <Button icon={<ShareAltOutlined />}></Button>
+              {/* <Button icon={<ShareAltOutlined />}></Button> */}
             </Tooltip>
           </div>
         </div>
