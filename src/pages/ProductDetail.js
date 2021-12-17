@@ -1,5 +1,4 @@
 import React from "react";
-// import { useDispatch } from "react-redux";
 import { useParams } from "react-router";
 import {
   Image,
@@ -12,137 +11,153 @@ import {
   Avatar,
 } from "antd";
 import "../components/styles/ProductDetail.css";
-import { ShoppingCart } from "react-feather";
+import {
+  MdOutlineShoppingCart,
+  MdOutlineRemoveShoppingCart,
+} from "react-icons/md";
 import { HomeOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 import Meta from "antd/lib/card/Meta";
+import { useGetProductByIdQuery } from "../services/app.api";
+import { useDispatch, useSelector } from "react-redux";
+import { addProduct, removeProduct } from "../features/cartSlice";
 
 export default function ProductDetail() {
-  // const dispatch = useDispatch();
-  const { id } = useParams();
-  // const { title } = useParams();
+  const dispatch = useDispatch();
+  const { cartItems } = useSelector((state) => state.cart);
+  let { id } = useParams();
+  let { data = {}, isLoading } = useGetProductByIdQuery(id);
+  // let { product } = data;
+  let cartIdArray = [];
+  cartItems.forEach((item) => {
+    cartIdArray.push(item._id);
+  });
 
   return (
-    <div className="iBody">
-      <div className="iContainer">
-        <div className="font_english">
-          <Breadcrumb>
-            <Breadcrumb.Item>
-              <Link to="/">
-                <HomeOutlined />
-              </Link>
-            </Breadcrumb.Item>
-            <Breadcrumb.Item>
-              <Link to="/products">
-                <span className="font_english">Products</span>
-              </Link>
-            </Breadcrumb.Item>
-            <Breadcrumb.Item>5</Breadcrumb.Item>
-          </Breadcrumb>
-        </div>
-        <div className="iProductDetailBody">
-          <Divider className="iDivider" orientation="right">
-            وردەکاری
-          </Divider>
-
-          <div className="iProductDetails">
-            <div className="iProductImages">
-              <Image.PreviewGroup>
-                <div className="iProductImageBig">
-                  <Image
-                    width="100%"
-                    src="https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png"
-                  />
+    <>
+      {isLoading && "Loading..."}
+      {data && (
+        <div className="iBody">
+          <div className="iContainer iContainerProductDetail">
+            <div className="font_english">
+              <Breadcrumb>
+                <Breadcrumb.Item>
+                  <Link to="/">
+                    <HomeOutlined />
+                  </Link>
+                </Breadcrumb.Item>
+                <Breadcrumb.Item>{data?.productName}</Breadcrumb.Item>
+                <Breadcrumb.Item>
+                  <Link to="/products">
+                    <span>کاڵاکان</span>
+                  </Link>
+                </Breadcrumb.Item>
+              </Breadcrumb>
+            </div>
+            <div className="iProductDetailBody">
+              <Divider className="iDivider" orientation="right">
+                وردەکاری
+              </Divider>
+              <div className="iProductDetails">
+                <div className="iProductImages">
+                  <Image.PreviewGroup>
+                    <div className="iProductImageBig">
+                      <Image width="100%" src={data.img} />
+                    </div>
+                    <div className="iProductImageSmall">
+                      {data.img?.map((i) => {
+                        return <Image width={100} src={i} />;
+                      })}
+                    </div>
+                  </Image.PreviewGroup>
                 </div>
-                <div className="iProductImageSmall">
-                  <Image
-                    width={100}
-                    src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
-                  />
-                  <Image
-                    width={100}
-                    src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg"
-                  />
-                  <Image
-                    width={100}
-                    src="https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg"
-                  />
-                  <Image
-                    width={100}
-                    src="https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg"
-                  />
-                  <Image
-                    width={100}
-                    src="https://gw.alipayobjects.com/zos/antfincdn/aPkFc8Sj7n/method-draw-image.svg"
-                  />
+                <div className="iProductDetail">
+                  <div className="iProductDetailHeader">
+                    <h1>
+                      <strong>{data.productName}</strong>
+                    </h1>
+                    <h5>فڕۆشیار: {data.storeUsername}</h5>
+                  </div>
+                  <Divider className="iDivider" orientation="right" />
+                  <div className=" iProductDetailDesc">
+                    <p>{data.description}</p>
+                  </div>
+                  <div className="iProductDetailPrice">
+                    <p>
+                      <strong>نرخ</strong>
+                    </p>
+                    <h1>
+                      <strong className="font_english">
+                        {parseFloat(data.price).toLocaleString()} IQD
+                      </strong>
+                    </h1>
+                    <Rate value={4} />
+                  </div>
+
+                  <div className="iProductBtn">
+                    {!cartIdArray.includes(data._id) ? (
+                      <Button
+                        className="iProductBtnCart"
+                        icon={<MdOutlineShoppingCart size="20" width="40" />}
+                        onClick={() => {
+                          dispatch(
+                            addProduct({
+                              title: data?.productName,
+                              description: data.description,
+                              image: data.img,
+                              price: data.price,
+                              _id: data._id,
+                              amount: 1,
+                            })
+                          );
+                        }}
+                      >
+                        بیکە سەبەتەکەوە
+                      </Button>
+                    ) : (
+                      <Button
+                        className="iProductBtnCart"
+                        icon={
+                          <MdOutlineRemoveShoppingCart size="20" width="40" />
+                        }
+                        onClick={() => {
+                          dispatch(removeProduct(data._id));
+                        }}
+                      >
+                        دەریکە لە سەبەتەکە
+                      </Button>
+                    )}
+                  </div>
                 </div>
-              </Image.PreviewGroup>
-            </div>
-            <div className="iProductDetail">
-              <div className="iProductDetailHeader">
-                <h1>
-                  <strong>جانتای شانی ئافرەتان</strong>
-                </h1>
-                <h5>فڕۆشیار: {id}</h5>
-              </div>
-              <Divider className="iDivider" orientation="right" />
-              <div className=" iProductDetailDesc">
-                <p>
-                  جانتای شانی ئافرەتان قەبارەی جانتا: پانی: 29سم. بەرزی: 28سم.
-                  قووڵایی: 11سم. تایبەتمەندی داخستنی زینجری هەیە. لە بەشی پێشەوە
-                  1 گیرفانێکی زیپکراو هەیە بۆ هەلگرتنی تەلەفۆن یا هەرشتێکی تر.
-                  گیرفانێکی ناوەوەی زیپکراو هەیە بۆ هەڵگرتنی شتەکان. گەرەنتی ٢
-                  ساڵی لەگەڵ دایە. لە تورکیا دروست کراوە.
-                </p>
-              </div>
-              <div className="iProductDetailPrice">
-                <p>
-                  <strong>نرخ</strong>
-                </p>
-                <h1>
-                  <strong className="font_english"> 25,000 IQD</strong>
-                </h1>
-                <Rate value={4} />
               </div>
 
-              <div className="iProductBtn">
-                <Button
-                  className="iProductBtnCart"
-                  icon={<ShoppingCart size="20" width="40" />}
-                >
-                  بیکە سەبەتەکەوە
-                </Button>
-                <Button
-                  className="iProductBtnLike"
-                  icon={<ShoppingCart size="20" />}
-                />
+              <div className="iProductStoreProfileParent">
+                <Divider className="iDivider" orientation="right">
+                  فڕۆشیار
+                </Divider>
+                <div className="iProductStoreProfile">
+                  <Card style={{ width: 300 }}>
+                    <Meta
+                      avatar={
+                        <Avatar src="https://joeschmoe.io/api/v1/random" />
+                      }
+                      title={data.storeUsername}
+                    />
+                  </Card>
+                </div>
+              </div>
+              <div className="iProductComment">
+                <Divider className="iDivider" orientation="right">
+                  هەڵسەنگاندنەکان
+                </Divider>
+                <Skeleton active avatar />
+                <Skeleton active avatar />
+                <Skeleton active avatar />
               </div>
             </div>
           </div>
-          <div className="iProductStoreProfileParent">
-            <Divider className="iDivider" orientation="right">
-              فڕۆشیار
-            </Divider>
-            <div className="iProductStoreProfile">
-              <Card style={{ width: 300 }}>
-                <Meta
-                  avatar={<Avatar src="https://joeschmoe.io/api/v1/random" />}
-                  title="Card title"
-                  description="This is the description"
-                />
-              </Card>
-            </div>
-          </div>
-          <div className="iProductComment">
-            <Divider className="iDivider" orientation="right">
-              هەڵسەنگاندنەکان
-            </Divider>
-            <Skeleton active avatar />
-            <Skeleton active avatar />
-            <Skeleton active avatar />
-          </div>
         </div>
-      </div>
-    </div>
+      )}
+    </>
   );
 }

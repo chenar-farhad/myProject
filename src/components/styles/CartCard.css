@@ -57,6 +57,8 @@
 }
 .iCartCardDesText .iCartCardDesTextDes {
   max-height: 45px !important;
-
+  color: var(--colorBlack);
   overflow: hidden;
+  cursor: pointer;
 }
+

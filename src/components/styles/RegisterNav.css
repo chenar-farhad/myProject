@@ -1,18 +1,27 @@
-.iRegisterNav {
+.iRegisterBody {
   display: flex;
+  justify-content: space-between;
 }
-.iRegisterNav h1 {
 
+.iRegisterLogo{
+  display: flex;
+  align-items: center;
+}
+.iRegisterLogo h1 {
   margin-bottom: 0px;
   margin-left: 20px;
-  width: 100%;
   font-weight: bold;
   color: var(--colorMain1);
 }
+
 .iRegisterNav ul {
-  display: flex;
-  justify-content: right;
+  width: 100%;
 }
 
-
-
+.iBigNavLoggedin{
+  padding: 10px;
+}
+.iBigNavAvatar img{
+  background-color: var(--colorMain1);
+  border: 2px solid var(--colorMain1);
+}

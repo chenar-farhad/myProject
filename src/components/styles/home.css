@@ -105,6 +105,10 @@
 
 /* START mobile And Tablet */
 @media only screen and (max-width: 1224px) {
+
+  .iContainerHome{
+    padding-top: 30px;
+  }
   .iHomeHero {
     margin: 0px 0px 10px 0px;
   }

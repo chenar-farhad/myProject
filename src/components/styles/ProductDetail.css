@@ -112,14 +112,17 @@
   margin: 0px 0px 20px 0px;
   padding: 20px;
 }
-.iProductStoreProfile{
+.iProductStoreProfile {
   display: flex;
   justify-content: right;
   direction: rtl;
 }
-/* START mobile And Tablet */
 
+/* START mobile And Tablet */
 @media only screen and (max-width: 1224px) {
+  .iContainerProductDetail {
+    margin-top: 40px !important;
+  }
   .iProductDetails {
     display: flex;
     flex-direction: column;

@@ -4,21 +4,15 @@ import CartCard from "../components/CartCard";
 import "../components/styles/Carts.css";
 
 export default function Carts() {
-  const products = useSelector((state) => state.cart.products);
+  const cartItems = useSelector((state) => state.cart.cartItems);
   return (
     <div className="iBodyCart">
       <div className="iCartContainer">
         <div className="iCarts">
-          {products.map((p, index) => {
+          {cartItems.map((p, index) => {
             return (
               <div>
-                <CartCard
-                  title={p.title}
-                  description={p.description}
-                  image={p.image}
-                  index={index}
-                  price={p.price}
-                />
+                <CartCard key={index} product={p} />
               </div>
             );
           })}

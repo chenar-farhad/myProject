@@ -26,27 +26,38 @@
   padding: 20px;
 }
 
-.iCard Button {
+.iCard .btnAdd {
+  padding-top: 7px !important;
   border: 0px;
   border-radius: 30px;
   margin: 0px 5px 0px 5px !important;
-  /* after edit*/
   width: 100px;
-
   background-color: var(--colorWhite);
   color: var(--colorMain1);
   border: 1px solid var(--colorMain1);
 }
-.iCard button:hover {
-  border: 0px;
+.iCard .btnAdd:hover {
   border-radius: 30px;
-
-  /* background-color: var(--colorMain1);
-  color: var(--colorWhite); */
-
-  /* after edit*/
   background-color: var(--colorMain1);
   color: var(--colorWhite);
+  border: 1px solid var(--colorMain1);
+}
+
+.iCard .btnRemove {
+  padding-top: 7px !important;
+  border: 0px;
+  border-radius: 30px;
+  margin: 0px 5px 0px 5px !important;
+  width: 100px;
+  color: var(--colorWhite);
+  background: var(--colorMain1);
+  border: 1px solid var(--colorMain1);
+}
+.iCard .btnRemove:hover {
+  border-radius: 30px;
+  color: var(--colorMain1);
+  background: var(--colorWhite);
+  border: 1px solid var(--colorMain1);
 }
 
 .iCard button:focus {

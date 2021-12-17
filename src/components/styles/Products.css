@@ -49,6 +49,7 @@
   }
 
   .iContainerProducts {
+    padding-top: 10px;
     width: 95% !important;
     flex-direction: column !important;
   }

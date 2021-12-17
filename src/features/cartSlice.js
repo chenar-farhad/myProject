@@ -1,26 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
+let storageCart = JSON.parse(localStorage.getItem("cart") || "[]");
 
 const initialState = {
-  products: [
-    {
-      title: "نازانم چی",
-      description: "شانی وایەو باڵی وایەشانی وایەو باڵی وایەشانی وایەو باڵی وایەشانی وایەو باڵی وایەشانی وایەو باڵی وایەشانی وایەو باڵی وایەشانی وایەو باڵی وایەسسس.",
-      image: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
-      price: "500000",
-    },
-    {
-      title: "titleeee",
-      description: "fsfsdfffdsf",
-      image: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
-      price: "5750",
-    },
-    {
-      title: "titleeee",
-      description: "fsfsdfffdsf",
-      image: "https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png",
-      price: "20000"
-    },    
-  ],
+  cartItems: storageCart,
 };
 
 const cartSlice = createSlice({
@@ -28,22 +10,48 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addProduct: (state, action) => {
-      state.products = [
-        ...state.products,
+      state.cartItems = [
+        ...state.cartItems,
         {
+          _id: action.payload._id,
           title: action.payload.title,
           description: action.payload.description,
           image: action.payload.image,
           price: action.payload.price,
+          amount: action.payload.amount,
         },
       ];
     },
 
     removeProduct: (state, action) => {
-      state.products.splice(action.payload, 1);
+      let newCartItems = state.cartItems.filter((product) => {
+        return product._id !== action.payload;
+      });
+      state.cartItems = newCartItems;
+      localStorage.setItem("cart", JSON.stringify(state.cartItems));
+    },
+
+    incrementQuantity: (state, action) => {
+      let itemIndex = state.cartItems.findIndex(
+        (product) => product._id === action.payload
+      );
+      state.cartItems[itemIndex].amount++;
+      localStorage.setItem("cart", JSON.stringify(state.cartItems));
+    },
+    decrementQuantity: (state, action) => {
+      let itemIndex = state.cartItems.findIndex(
+        (product) => product._id === action.payload
+      );
+      state.cartItems[itemIndex].amount--;
+      localStorage.setItem("cart", JSON.stringify(state.cartItems));
     },
   },
 });
 
-export const { addProduct, removeProduct } = cartSlice.actions;
+export const {
+  addProduct,
+  removeProduct,
+  incrementQuantity,
+  decrementQuantity,
+} = cartSlice.actions;
 export default cartSlice.reducer;

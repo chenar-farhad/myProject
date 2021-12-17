@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 import { Card } from "antd";
+import { Link } from "react-router-dom";
 import { Plus, Minus, X } from "react-feather";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import "./styles/CartCard.css";
-import { removeProduct } from "../features/cartSlice";
+import {
+  removeProduct,
+  incrementQuantity,
+  decrementQuantity,
+} from "../features/cartSlice";
 
-export default function CartCard(props) {
-  const products = useSelector((state) => state.cart.products);
+export default function CartCard({ product }) {
   const dispatch = useDispatch();
-  const [qty, setQty] = useState(1);
-
   return (
     <div className="iCartCardBody">
       <Card
@@ -17,44 +19,46 @@ export default function CartCard(props) {
         actions={[
           <Minus
             onClick={() => {
-              setQty(qty - 1);
+              dispatch(decrementQuantity(product._id));
             }}
             key="setting"
           />,
           <Plus
             onClick={() => {
-              setQty(qty + 1);
+              dispatch(incrementQuantity(product._id));
             }}
             key="edit"
           />,
           <X
             onClick={() => {
-              dispatch(removeProduct(props.index));
-              // setQty(0);
+              dispatch(removeProduct(product._id));
             }}
             key="ellipsis"
           />,
         ]}
       >
         <div className="iCartCardDesParent">
-          <div className="iCartCardDes">
-            <div className="iCartCardDesText">
-              <h1 className="iCartCardDesTextTitle">{props.title}</h1>
-              <p className="iCartCardDesTextDes">{props.description}</p>
+          <Link to={`/products/${product._id}`}>
+            <div className="iCartCardDes">
+              <div className="iCartCardDesText">
+                <h1 className="iCartCardDesTextTitle">{product.title}</h1>
+                <p className="iCartCardDesTextDes">{product.description}</p>
+              </div>
+              <div className="iCartCardDesImage">
+                <img src={product.image} alt="img" />
+              </div>
             </div>
-            <div className="iCartCardDesImage">
-              <img src={props.image} alt="img" />
-            </div>
-          </div>
+          </Link>
           <div className=" iCartCardDesPrice">
             <h1 className="font_english">
-              {parseFloat(props.price).toLocaleString()} IQD
+              {parseFloat(product.price).toLocaleString()} IQD
             </h1>
             <p className="font_english">*</p>
-            <h1 className="font_english">{qty}</h1>
+            <h1 className="font_english">{product.amount}</h1>
             <p>=</p>
             <h1 className="font_english iCartCardDesTextPrice">
-              {(qty * parseFloat(props.price)).toLocaleString()} IQD
+              {(product.amount * parseFloat(product.price)).toLocaleString()}{" "}
+              IQD
             </h1>
           </div>
         </div>

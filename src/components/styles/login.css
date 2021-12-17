@@ -74,6 +74,17 @@
   align-items: center;
 }
 
+.iContentLogin .warning{
+  color:red;
+  text-align: center;
+  width: 100%;
+}
+.iContentLogin .loginIcon{
+  width: 100%;
+  /* background-color: bisque; */
+  color: var(--colorMain1);
+  height: 100px;
+}
 /* START mobile And Tablet */
 @media only screen and (max-width: 1224px) {
   .iContentLogin {

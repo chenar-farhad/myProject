@@ -1,9 +1,9 @@
 import React from "react";
-import { Badge, Avatar } from "antd";
+import { Badge } from "antd";
 import { useSelector } from "react-redux";
-import { ShoppingCart, ShoppingBag } from "react-feather";
+import { ShoppingCart } from "react-feather";
 export default function MyBadge() {
-  const products = useSelector((state) => state.cart.products);
+  const cartItems = useSelector((state) => state.cart.cartItems);
   return (
     <div>
       <div
@@ -16,10 +16,10 @@ export default function MyBadge() {
       >
         <Badge
           style={{ fontFamily: "arial" }}
-          count={products.length}
+          count={cartItems.length}
           size="small"
         >
-          <ShoppingCart color="var(--colorMain1)" size="20"/>
+          <ShoppingCart color="var(--colorMain1)" size="20" />
         </Badge>
       </div>
     </div>
