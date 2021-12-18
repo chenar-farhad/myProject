@@ -3,13 +3,19 @@
   background-color: var(--colorWhite);
   border-radius: 10px;
   box-shadow: 1px 3px 10px var(--colorWhiteShadow);
-  margin: 0px 0px 50px 0px;
+  margin: 0px 0px 20px 0px;
   padding: 20px;
 
   display: flex;
   flex-direction: row;
 }
+.iProductDetailParent {
+  width: 100%;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .iProductDetailHeader {
   margin-bottom: 40px;
   direction: rtl;
@@ -21,11 +27,10 @@
 
 .iProductDetailDesc {
   padding: 0 20px 0 20px;
+  width: 100%;
   font-size: large;
   direction: rtl;
-}
-.iProductDetail {
-  width: 100%;
+  text-align: right;
 }
 
 .iProductImages img {
@@ -34,6 +39,9 @@
   overflow: hidden;
 }
 
+.iProductDetailFooter {
+  height: auto;
+}
 .iProductDetailPrice {
   width: 100%;
   margin-top: 50px;
@@ -49,16 +57,14 @@
 }
 
 .iProductBtn {
-  /* background-color: aqua; */
   width: 100%;
-  /* height: 200px !important; */
   display: flex;
   justify-content: center;
   align-items: end;
   padding: 20px;
 }
 
-.iProductBtnCart {
+.iProductBtnCartAdd {
   width: 200px;
   height: 50px;
   border-radius: 50px;
@@ -70,38 +76,41 @@
   justify-content: center;
   align-items: center;
 }
-.iProductBtnCart:hover {
+.iProductBtnCartAdd:hover {
   color: var(--colorMain1);
   background-color: var(--colorWhite);
   border: 1px solid var(--colorMain1);
 }
-
-.iProductBtnLike {
-  width: 50px;
+.iProductBtnCartRemove {
+  width: 200px;
   height: 50px;
   border-radius: 50px;
   margin: 0 5px 0 5px;
   border: 1px solid var(--colorMain1);
-  background-color: var(--colorMain1);
-  color: var(--colorWhite);
+  color: var(--colorMain1);
+  background: var(--colorWhite);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.iProductBtnLike:hover {
-  color: var(--colorMain1);
-  background-color: var(--colorWhite);
+.iProductBtnCartRemove:hover {
+  color: var(--colorWhite);
+  background-color: var(--colorMain1);
   border: 1px solid var(--colorMain1);
 }
-
+.iProductBtnCartRemove:active {
+  color: var(--colorWhite);
+  background-color: var(--colorMain1);
+  border: 1px solid var(--colorMain1);
+}
 .iProductComment {
   height: auto;
   background-color: var(--colorWhite);
   border-radius: 10px;
   box-shadow: 1px 3px 10px var(--colorWhiteShadow);
-  margin: 0px 0px 50px 0px;
+  margin: 0px 0px 20px 0px;
   padding: 20px;
+  direction: rtl;
 }
 
 .iProductStoreProfileParent {
@@ -118,10 +127,40 @@
   direction: rtl;
 }
 
+
+.iProductShowProduct{
+  height: auto;
+  background-color: var(--colorWhite);
+  border-radius: 10px;
+  box-shadow: 1px 3px 10px var(--colorWhiteShadow);
+  margin: 0px 0px 50px 0px;
+  padding: 20px;
+}
+
+
+/*****Desktop****/
+@media only screen and (min-width: 1224px) {
+  .iProductImageBig {
+    /* height: 500px; */
+  }
+  .iProductImageBig img {
+    object-fit: cover;
+    max-height: 500px;
+    max-width: 400px;
+    width: auto;
+    height: auto;
+  }
+  .iProductImageSmall img {
+    object-fit: contain;
+    height: 100px;
+  }
+}
+
 /* START mobile And Tablet */
 @media only screen and (max-width: 1224px) {
   .iContainerProductDetail {
     margin-top: 40px !important;
+    width: 95%;
   }
   .iProductDetails {
     display: flex;
@@ -132,12 +171,13 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
   }
 
   .iProductImageSmall img {
+    object-fit: contain;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -153,5 +193,13 @@
   .iProductDetailHeader h1 {
     padding-top: 30px;
     font-weight: bold;
+  }
+
+  .iProductImageBig img {
+    object-fit: contain;
+    width: 100%;
+    height: 400px;
+
+    /* background-color: aqua !important; */
   }
 }

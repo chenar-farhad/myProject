@@ -1,0 +1,24 @@
+.iFooterBody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.iFooterContainer{
+    width: 80%;
+}
+
+.iFooterNavigate  ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+
+.iFooterNavigate ul li{
+    color: var(--colorMain1);
+}
+.iFooterNavigate ul li a{
+color: var(--colorMain1);
+}
+

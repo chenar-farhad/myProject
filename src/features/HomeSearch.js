@@ -1,10 +1,30 @@
 import React from "react";
 import { SearchOutlined } from "@ant-design/icons";
-import { Button, Tooltip, Input, Row, Col } from "antd";
+import { Button, Tooltip, Input, Row, Col, Modal } from "antd";
 import MyBadge from "../features/MyBadge";
 import Cart from "../pages/Carts";
 import { Link } from "react-router-dom";
 
+
+
+function warning() {
+  Modal.warning({
+    content: (
+      <div style={{ direction: "rtl" }}>
+        <h4>
+          <b>ببورە، لەئێستادا ئەم بەشە بەردەست نییە! </b>
+        </h4>
+        <br />
+
+        <p>
+          بەهۆی نەبوونی کاتی تەواوە و گەورەی پرۆژەکە بەدوای لێبوردنەوە
+          نەمتوانیەوە کار لەتەوەوی پڕۆژەکە بکەم و بەتەواوی ئامادەی بکەم
+        </p>
+      </div>
+    ),
+    okText: "قەینا برا ئاساییە",
+  });
+}
 export default function HomeSearch() {
   return (
     <div className="iHomeSearch">
@@ -24,6 +44,7 @@ export default function HomeSearch() {
           icon={<SearchOutlined />}
           size="middle"
           style={{}}
+          onClick={()=>warning()}
         />
       </Tooltip>
 

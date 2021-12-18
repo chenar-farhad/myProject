@@ -26,7 +26,7 @@ export default function ProductCard({ product }) {
         hoverable
         cover={
           <Link to={`/products/${product._id}`}>
-            <img alt="example" src={product.img[0]} />
+            <img alt="example" src={product.img} />
           </Link>
         }
       >
@@ -68,7 +68,7 @@ export default function ProductCard({ product }) {
             ) : (
               <Tooltip title="دەریکە لە سەبەتەکە">
                 <Button
-                className="btnRemove"
+                  className="btnRemove"
                   icon={<MdOutlineRemoveShoppingCart size="15" width="40" />}
                   onClick={() => {
                     dispatch(removeProduct(product._id));

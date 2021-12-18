@@ -89,6 +89,9 @@
   background-color: var(--colorWhite);
   box-shadow: 1px 3px 10px var(--colorWhiteShadow);
 }
+.iProfileProducts{
+  margin-bottom: 50px;
+}
 /* START mobile And Tablet */
 @media only screen and (max-width: 1224px) {
   .iProfileContainer {

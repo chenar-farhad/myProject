@@ -15,6 +15,7 @@ const userSlice = createSlice({
     removeUser: (state, action) => {
       state.user = undefined;
       localStorage.removeItem("localUser");
+      window.location.reload();
     },
   },
 });

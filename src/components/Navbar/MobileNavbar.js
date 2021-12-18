@@ -3,6 +3,14 @@ import { Drawer, Button, Avatar } from "antd";
 import { Link } from "react-router-dom";
 import { Menu } from "react-feather";
 import "../styles/nav/MobileNavbar.css";
+
+import {
+  BiCategoryAlt,
+  BiStore,
+  HiOutlineShoppingBag,
+  MdOutlineCountertops,
+  BiHomeSmile,
+} from "react-icons/all";
 import { UserOutlined } from "@ant-design/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { removeUser } from "../../features/userSlice";
@@ -25,7 +33,7 @@ export default function MobileNavbar() {
       <div className="  iBodyMobileNav h-11 standalone:h-22">
         <div className=" MobileNavTitle">
           <Link as={Link} to="/">
-            <h1 className="font_english">Online Bazzar</h1>
+            <h1 className="font_english"> Online Bazzar</h1>
           </Link>
         </div>
         <div id="#mobailNav" className="iNavMobile">
@@ -75,11 +83,14 @@ export default function MobileNavbar() {
                         {localUser?.firstName} {localUser?.lastName}
                       </h4>
                     </Link>
-                    <p className="font_english iLoggedinUsername">{localUser.username}</p>
+                    <p className="font_english iLoggedinUsername">
+                      {localUser.username}
+                    </p>
                     <Link
-                      to="/login"
+                      to="#"
                       onClick={() => {
                         dispatch(removeUser());
+                        window.location.reload();
                       }}
                     >
                       <p className="iLoggoutButton">دەرچوون</p>
@@ -91,7 +102,7 @@ export default function MobileNavbar() {
             <div className="iNavListMobile" style={{ textAlign: "right" }}>
               <ul style={{ listStyleType: "none" }}>
                 <li>
-                  <Link as={Link} to="/home" onClick={onClose}>
+                  <Link as={Link} to="/" onClick={onClose}>
                     سەرەتا
                   </Link>
                 </li>
@@ -102,18 +113,21 @@ export default function MobileNavbar() {
                 </li>
                 <li>
                   <Link
-                    to="/"
-                    style={{ textDecoration: "none", color: "black" }}
+                    to="#"
+                    // style={{ textDecoration: "none", color: "black" }}
+                    onClick={onClose}
                   >
-                    بابەتەکان
+                    دووکانەکان
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    to="/"
-                    style={{ textDecoration: "none", color: "black" }}
-                  >
-                    شتی تر
+                  <Link as={Link} to="#" onClick={onClose}>
+                    بەشەکان
+                  </Link>
+                </li>
+                <li>
+                  <Link as={Link} to="#" onClick={onClose}>
+                    دڵخوازەکان
                   </Link>
                 </li>
               </ul>

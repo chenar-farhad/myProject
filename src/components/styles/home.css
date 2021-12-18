@@ -63,7 +63,7 @@
 
 .iHomeStores,
 .iHomeCategorys {
-  height: 300px;
+  height: 210px;
   width: 100%;
   background-color: var(--colorWhite);
   border-radius: 10px;
@@ -82,7 +82,7 @@
   display: flex;
   justify-content: space-around;
   flex-flow: wrap row;
-  height: 170px;
+  height: 80px;
 }
 .iHomeStoreContent Button,
 .iHomeCategorysContent Button {

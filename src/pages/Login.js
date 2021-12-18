@@ -37,6 +37,7 @@ export default function Login() {
                 onSubmitCapture={(e) => {
                   e.preventDefault();
                   userLogin({ username, password });
+                  // <YourComponent/>
                 }}
                 name="normal_login"
                 className="login-form"

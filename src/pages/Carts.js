@@ -17,6 +17,18 @@ export default function Carts() {
             );
           })}
         </div>
+        {/* <div className="iCartTotal">
+          <div className="iCartTotalText">
+            {cartItems.map((p, index) => {
+              return (
+                <div>
+                  <h1> {(p.price * p.amount)}</h1>
+                </div>
+              );
+            })}
+          </div>
+          <div className="iCartTotalButton"></div>
+        </div> */}
       </div>
     </div>
   );

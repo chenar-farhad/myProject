@@ -16,6 +16,7 @@ import Carts from "./pages/Carts";
 import ProductDetail from "./pages/ProductDetail";
 import ScrollToTop from "./features/ScrollToTop";
 import Profile from "./pages/Profile";
+import StoreProfile from "./pages/storeProfile";
 
 function App() {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1224px)" });
@@ -37,6 +38,7 @@ function App() {
         <Route path="/carts" element={<Carts />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/store-profile" element={<StoreProfile />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/products/:id" element={<ProductDetail />} />
         <Route path="*" element={<NotFound404 />} />

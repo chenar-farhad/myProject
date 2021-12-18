@@ -16,7 +16,13 @@
 .iCarts {
   height: auto;
   min-height: 100%;}
+.iCartTotal{
+  background: var(--colorMain2);
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 1px 3px 10px var(--colorWhiteShadow);
 
+}
 
 
 /* START mobile And Tablet */

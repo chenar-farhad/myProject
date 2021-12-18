@@ -1,9 +1,10 @@
 .iRegisterBody {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
-.iRegisterLogo{
+.iRegisterLogo {
   display: flex;
   align-items: center;
 }
@@ -14,14 +15,70 @@
   color: var(--colorMain1);
 }
 
-.iRegisterNav ul {
+i.iRegisterNav {
   width: 100%;
 }
-
-.iBigNavLoggedin{
-  padding: 10px;
+.iRegisterNav ul {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 100%;
 }
-.iBigNavAvatar img{
+
+.iBigNavLoggedin {
+  padding: 10px;
+  width: 400px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+.iBigNavAvatar img {
   background-color: var(--colorMain1);
   border: 2px solid var(--colorMain1);
+}
+
+.iBigNavLoggedinMenuDropdown {
+  min-width: 150px;
+  width: auto;
+  padding: 0px;
+  text-align: center;
+}
+.iBigNavLoggedinMenu {
+  color: var(--colorBlack);
+  border-radius: 10px 10px 10px 10px;
+}
+.iBigNavLoggedinMenu h3 {
+  padding-top: 5px;
+  margin-bottom: 0px;
+  font-family: "Speda-Bold";
+  color: var(--colorMain1);
+}
+.iBigNavLoggedinMenuDropdown .iLoggoutButton {
+  background-color: var(--colorMain1);
+  color: var(--colorWhite);
+  border: 1px solid var(--colorMain1);
+  border-radius: 10px;
+  padding: 2px;
+  margin: 20px 10px 10px 10px;
+  transition: 100ms;
+}
+.iBigNavLoggedinMenuDropdown .iLoggoutButton:hover {
+  color: var(--colorMain1);
+  background: var(--colorWhite);
+  border: 1px solid var(--colorMain1);
+}
+
+.iBigNavLoggedinName {
+  margin-right: -10px;
+  padding: 0px 20px 0px 15px;
+  background: var(--colorMain1);
+  color: var(--colorWhite);
+  width: auto;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+align-items: center;
+box-shadow: 3px 3px 5px var(--colorWhiteShadow);
+
 }

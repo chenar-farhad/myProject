@@ -1,0 +1,32 @@
+.iProductComment .ant-comment-avatar {
+  padding: 0 10px 10px 10px;
+}
+.iProductComment .ant-comment-avatar img {
+  border: 2px solid var(--colorMain1);
+}
+
+.iProductComment .ant-comment-content-detail p {
+  padding-right: 15px;
+}
+
+.iProductComment .ant-input {
+  border-radius: 5px;
+  /* border: 1px solid var(--colorMain1); */
+}
+
+.iProductComment .ant-form-item-control-input-content .ant-btn {
+  color: var(--colorMain1);
+  background: var(--colorWhite);
+  border-radius: 5px;
+  height: 40px;
+  min-width: 130px;
+  width: auto;
+}
+
+.iProductComment .ant-form-item-control-input-content .ant-btn:hover {
+  border: 1px solid var(--colorMain1);
+}
+
+.iProductComment .ant-comment-content-author-name {
+  color: var(--colorMain1);
+}

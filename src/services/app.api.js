@@ -28,21 +28,21 @@ export const appApiSlice = createApi({
         query: (id) => `/products/${id}`,
       }),
 
-      getStoreName: builder.query({
-        query: () => `/store`,
+      getStoreDetail: builder.query({
+        query: (storeUsername) => `/store/${storeUsername}`,
       }),
-      // postRegister: builder.mutation({
-      //   query: (data) => ({
-      //     url: "/register",
-      //     method: "POST",
-      //     body: data,
-      //   }),
-      // }),
       login: builder.mutation({
         query: ({ username, password }) => ({
           url: "login",
           method: "POST",
           body: { username, password },
+        }),
+      }),
+      register: builder.mutation({
+        query: ({ username, email, password }) => ({
+          url: `register`,
+          method: "POST",
+          body: { username, email, password },
         }),
       }),
     };
@@ -53,7 +53,7 @@ export const {
   // useGetCategoriesQuery,
   useGetProductsQuery,
   useGetProductByIdQuery,
-  useGetStoreNameQuery,
+  useGetStoreDetailQuery,
   useLoginMutation,
-  // usePostRegisterMutation,
+  useRegisterMutation,
 } = appApiSlice;
